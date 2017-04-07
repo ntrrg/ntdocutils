@@ -1,0 +1,6 @@
+include CHANGELOG.rst
+include CONTRIBUTING.rst
+include LICENSE
+recursive-include ntdocutils/themes *
+global-exclude __pycache__
+global-exclude *.py[co]
