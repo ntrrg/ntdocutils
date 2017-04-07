@@ -6,3 +6,11 @@ Change Log
 
 Unreleased_
 ===========
+
+0.1.0
+=====
+
+Added
+-----
+
+* Basic structure
