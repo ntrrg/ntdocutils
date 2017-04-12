@@ -13,6 +13,10 @@ NtDocutils
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :target: https://opensource.org/licenses/MIT
 
+.. image:: https://badges.gitter.im/NtDocutils/Lobby.svg
+    :alt: Join the chat at https://gitter.im/NtDocutils/Lobby
+    :target: https://gitter.im/NtDocutils/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 .. image:: https://github.com/ntrrg/NtDocutils/raw/v0.1.0/docs/images/ntdocutils.png
 
 __ MDL_
@@ -156,8 +160,3 @@ __ MDL_
 .. _Python: https://www.python.org/
 .. _Pygments: http://pygments.org/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
-
-
-.. image:: https://badges.gitter.im/NtDocutils/Lobby.svg
-   :alt: Join the chat at https://gitter.im/NtDocutils/Lobby
-   :target: https://gitter.im/NtDocutils/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
