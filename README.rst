@@ -160,3 +160,8 @@ __ MDL_
 .. _Python: https://www.python.org/
 .. _Pygments: http://pygments.org/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
+
+
+.. image:: https://badges.gitter.im/ntrrg/NtDocutils.svg
+   :alt: Join the chat at https://gitter.im/ntrrg/NtDocutils
+   :target: https://gitter.im/ntrrg/NtDocutils?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
