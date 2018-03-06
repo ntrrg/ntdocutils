@@ -3,59 +3,72 @@
 .. role:: py(code)
     :language: python3
 
-==========
-NtDocutils
-==========
+.. raw:: html
 
-.. image:: https://img.shields.io/badge/version-0.1.0-blue.svg
-    :target: https://github.com/ntrrg/NtDocutils/releases/tag/v0.1.0
+    <p align="center">
+      <img alt="NtDocutils" width="240" src="docs/images/ntdocutils.png"/>
+    </p>
+
+.. image:: https://img.shields.io/pypi/v/NtDocutils.svg
+    :target: https://pypi.python.org/pypi/NtDocutils
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :alt: License
     :target: https://opensource.org/licenses/MIT
 
-.. image:: https://badges.gitter.im/NtDocutils/Lobby.svg
-    :alt: Join the chat at https://gitter.im/NtDocutils/Lobby
-    :target: https://gitter.im/NtDocutils/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-
-.. image:: https://github.com/ntrrg/NtDocutils/raw/v0.1.0/docs/images/ntdocutils.png
-
-__ MDL_
-__ NtDocutils_
+__ https://getmdl.io/
 
 **NtDocutils** is a `Material Design Lite`__ theme for Docutils_. See the
-`official site`__ for more info.
+`official site <https://ntrrg.github.io/NtDocutils/>`_ for more info.
 
 Features
 ========
 
-* All features from Docutils_ for the ``rst2html5.py`` writer.
+* All the features from Docutils_ for the ``rst2html5.py`` writer.
 
 * Special roles for emojis and keyboard keys.
 
-* Filter content by OS and distributions.
+* Filter content by OS, distributions, categories or any other filters you
+  want.
 
-* Download the attachments, print the article and more.
+* Attachments, print friendly and more.
 
 * Theme customization.
 
-Installation
-============
-
-    If you will install **NtDocutils** without a virtualenv on Debian (or
-    other GNU/Linux distribution), you will need superuser privileges.
+Install
+=======
 
 **NtDocutils** requires:
 
-* Python_ 3.4 or above
-* Docutils_ 0.13.1 *(autoinstalled)*
-* Pygments_ 2.2.0 *(autoinstalled)*
+* `Python <https://www.python.org/>`_ 3.4 or above
+* Docutils_ 0.14 (autoinstalled)
+* `Pygments <http://pygments.org/>`_ 2.2.0 (autoinstalled)
 
 From PyPI
 ---------
 
 .. code:: sh
 
-    pip install NtDocutils==0.1.0
+    pip install NtDocutils==0.2.0
+
+From source
+-----------
+
+.. code:: sh
+
+    wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.0.tar.gz'
+
+.. code:: sh
+
+    tar -xvf NtDocutils-0.2.0.tar.gz
+
+.. code:: sh
+
+    cd NtDocutils-0.2.0
+
+.. code:: sh
+
+    python3 setup.py
 
 Usage
 =====
@@ -92,14 +105,16 @@ Basically, you have to do two things:
 
 And that's it, you already have some like this:
 
-.. image:: https://github.com/ntrrg/NtDocutils/raw/v0.1.0/docs/images/merida.jpg
+.. image:: docs/images/example.png
 
 __ https://ntrrg.github.io/NtDocutils/#usage
 
-See `this section`__ in the official site for more utilites.
+The official site shows a better explanation in `this section`__.
 
 Command line reference
 ----------------------
+
+All the options from the ``rst2html5.py`` writer are available.
 
 .. code:: text
 
@@ -112,51 +127,60 @@ Command line reference
     Shows the **NtDocutils** version.
 
 -S SERVER, --server SERVER
-    Server where assets are hosted. If ``file`` is passed as value, it will
-    activate the offline mode, this will create a directory with the theme
-    name in the ``DESTINATION`` parent folder and stores the necessary assets
-    in there.
+    Server from where assets will be downloaded. If ``local`` is passed as
+    value, it will activate the offline mode, this will create a directory
+    with the theme name in the ``DESTINATION`` parent folder and stores the
+    necessary assets in there.
 
-..
-
-    All the options from the ``rst2html.py`` writer are available.
-
-Uninstallation
-==============
-
-    If you did install **NtDocutils** without a virtualenv on Debian (or other
-    GNU/Linux distribution), you will need superuser privileges.
+Uninstall
+=========
 
 Should be enough with this:
 
 .. code:: sh
 
-    pip uninstall NtDocutils
+    pip uninstall -y NtDocutils docutils Pygments
 
-Attributions and references
-===========================
+Contributing
+============
 
-**NtDocutils** uses:
+See the `contribution guide <CONTRIBUTING.md>`_ for more information.
 
-* reStructuredText_ and Docutils_
+Acknowledgment
+==============
 
-__ MDL_
+Working on this project I use/used:
 
-* `Material Design Lite`__
-* Roboto_
-* `Material icons`_
+* `Debian <https://www.debian.org/>`_
+
+* `XFCE <https://xfce.org/>`_
+
+* `Sublime <ext 3](https://www.sublimetext.com/3>`_
+
+* `Chrome <https://www.google.com/chrome/browser/desktop/index.html>`_
+
+* `Terminator <https://gnometerminator.blogspot.com/p/introduction.html>`_
+
+* `Zsh <http://www.zsh.org/>`_
+
+* `Git <https://git-scm.com/>`_
+
+* `EditorConfig <http://editorconfig.org/>`_
+
+* `Github <https://github.com>`_
+
+* `Inkscape <https://inkscape.org/en/>`_
+
+* `GIMP <https://www.gimp.org/>`_
+
+* `Material Icons <https://material.io/icons/>`_
+
+* `Roboto <https://fonts.google.com/specimen/Roboto>`_
 
 **Docutils Team.** *reStructuredText.* http://docutils.sourceforge.net/rst.html
 
-**Mozilla Developer Network.** *JavaScript | MDN.* https://developer.mozilla.org/en-US/docs/Web/JavaScript
+**Mozilla Developer Network.** *JavaScript.* https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 .. Links
 
-.. _MDL: https://getmdl.io/
 .. _Docutils: http://docutils.sourceforge.net/
-.. _NtDocutils: https://ntrrg.github.io/NtDocutils/
-.. _Roboto: https://fonts.google.com/specimen/Roboto
-.. _Material Icons: https://material.io/icons/
-.. _Python: https://www.python.org/
-.. _Pygments: http://pygments.org/
-.. _reStructuredText: http://docutils.sourceforge.net/rst.html
