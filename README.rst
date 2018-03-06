@@ -177,6 +177,8 @@ Working on this project I use/used:
 
 * `Roboto <https://fonts.google.com/specimen/Roboto>`_
 
+* `RawGit <https://rawgit.com/>`_
+
 **Docutils Team.** *reStructuredText.* http://docutils.sourceforge.net/rst.html
 
 **Mozilla Developer Network.** *JavaScript.* https://developer.mozilla.org/en-US/docs/Web/JavaScript
