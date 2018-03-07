@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Upgrade Docutils to 0.14
 * `local` instead `file` in the `--server` CLI option
 * Improved source code structure
+* Improved documentation
 
 ## 0.1.0
 

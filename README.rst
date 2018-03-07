@@ -1,8 +1,3 @@
-.. Roles
-
-.. role:: py(code)
-    :language: python3
-
 .. raw:: html
 
     <p align="center">
@@ -114,7 +109,7 @@ The official site shows a better explanation in `this section`__.
 Command line reference
 ----------------------
 
-All the options from the ``rst2html5.py`` writer are available.
+All options from the ``rst2html5.py`` writer are available.
 
 .. code:: text
 
