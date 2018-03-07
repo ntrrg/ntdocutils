@@ -1,6 +1,5 @@
 # NtDocutils https://ntrrg.github.io/NtDocutils/
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
-# Licensed under The MIT License. See LICENSE file for full licensing details.
 
 from setuptools import setup, find_packages
 from os import path
@@ -23,11 +22,12 @@ setup(
     license="MIT",
 
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
         "Intended Audience :: End Users/Desktop",
         "Intended Audience :: Other Audience",
         "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
         "Intended Audience :: System Administrators",
         "License :: OSI Approved :: MIT License",
         "Topic :: Documentation",
@@ -41,7 +41,7 @@ setup(
 
     keywords="docutils restructuredtext docutils-theme documentation",
     packages=find_packages(),
-    install_requires=["docutils==0.13.1", "Pygments==2.2.0"],
+    install_requires=["docutils==0.14", "Pygments==2.2.0"],
     include_package_data=True,
 
     entry_points={

@@ -1,522 +1,485 @@
 // NtDocutils https://ntrrg.github.io/NtDocutils/
 // Copyright 2017 Miguel Angel Rivera Notararigo
-// Licensed under The MIT License. See LICENSE file for full licensing details.
+// This file follows the Standart Style Guide (https://standardjs.com/)
 
-window.addEventListener("load", function () {
-    docinfo();
-    OSFilter();
-    options();
-    links();
-    noPrint();
-});
+'use strict'
 
-function docinfo() {
-    /***:js:`function docinfo()`.
+window.addEventListener('load', () => {
+  if (window.ATTACHMENTS === undefined) {
+    window.ATTACHMENTS = []
+  }
 
-    Replace bibliographic fields with Material Icons.
-    ***/
-    var fields = document.querySelectorAll(".docinfo dt");
+  removeMediaPrint()
+  bFieldsToIcons()
+  setupFilters()
+  setupArticleOptions()
+  setupExternalLinks()
+})
 
-    for(var i = 0; i < fields.length; ++i) {
-        var field = fields[i];
-        var icon;
+const ICONS = new Map([
+  ['author', 'person'],
+  ['authors', 'people'],
+  ['organization', 'group_work'],
+  ['contact', 'email'],
+  ['address', 'place'],
+  ['version', 'code'],
+  ['status', 'show_chart'],
+  ['date', 'access_time'],
+  ['copyright', 'copyright'],
+  ['license', 'copyright']
+])
 
-        switch(field.className) {
-            case "author":
-                icon = "person";
-            break;
+/**
+ * Adds classes to an element.
+ *
+ * @param {HTMLElement} element - Element where classes will be added.
+ * @param {String} classNames - Space separated classes to add.
+ *
+ * @example
+ *
+ * // <body><body>
+ * addClass(document.body, 'is-large-screen')
+ * // <body class='is-large-screen'><body>
+ */
+function addClass(element, classNames) {
+  for (const className of classNames.split(' ')) {
+    if (hasClass(element, className)) { continue }
 
-            case "authors":
-                icon = "people";
-            break;
-
-            case "organization":
-                icon = "group_work";
-            break;
-
-            case "contact":
-                icon = "email";
-            break;
-
-            case "address":
-                icon = "place";
-            break;
-
-            case "version":
-                icon = "code";
-            break;
-
-            case "status":
-                icon = "show_chart";
-            break;
-
-            case "date":
-                icon = "access_time";
-            break;
-
-            case "copyright":
-                icon = "copyright";
-            break;
-
-            case "license":
-                icon = "copyright";
-            break;
-
-            default:
-                icon = "info";
-            break;
-        };
-
-        var icon = elementCreate("i", {
-            "class": "material-icons",
-            "title": field.textContent,
-            "textContent": icon
-        });
-        elementUpdate(field, {"innerHTML": ""});
-        field.appendChild(icon);
-    }
+    element.className += ' ' + className
+  }
 }
 
-function links() {
-    /***:js:`function links()`.
+/**
+ * Replaces bibliographic fields with Material Icons.
+ */
+function bFieldsToIcons() {
+  const fields = document.querySelectorAll('.docinfo dt')
 
-    Open external links in a new tab.
-    ***/
-    var links = document.querySelectorAll("a:not([href^='#'])");
+  for (const field of fields) {
+    const icon = createElement('i', {
+      class: 'material-icons',
+      title: field.textContent,
+      textContent: ICONS.get(field.className) || 'info'
+    })
 
-    for(var i = 0; i < links.length; ++i) {
-        var link = links[i];
-
-        if(link.href)
-            elementUpdate(link, {"target": "_blank"});
-    }
+    updateElement(field, { innerHTML: '' })
+    field.appendChild(icon)
+  }
 }
 
-function noPrint() {
-    /***:js:`function noPrint()`.
+/**
+ * Creates a HTML element.
+ *
+ * @param {Sting} type - Element name.
+ * @param {Object} [attributes] - Attributes for the new element, same as
+ *                                `attributes` in `updateElement`.
+ * @return {HTMLElement}
+ *
+ * @example
+ *
+ * document.body.appendChild(createElement('input', {
+ *   type: 'text',
+ *   value: 'Hello world!',
+ *   style: { color: 'green' }
+ * }))
+ */
+function createElement(type, attributes) {
+  const element = document.createElement(type)
 
-    Remove :css:`@media print` from stylesheets.
-    ***/
-    var sheets = document.styleSheets;
+  if (attributes) { updateElement(element, attributes) }
 
-    for(var i = 0; i < sheets.length; ++i) {
-        var sheet = sheets[i];
+  return element
+}
 
-        if(sheet.href)
-            continue;
+/**
+ * Gets a Material icon that match with the file extension.
+ *
+ * @param {String} name - File name or path.
+ * @return {String}
+ *
+ * @example
+ *
+ * fileToIcon('image.png')
+ * // 'image'
+ *
+ * fileToIcon('https://domain.com/doc.pdf')
+ * // 'picture_as_pdf'
+ */
+function fileToIcon(name) {
+  switch (name.match(/\.\w+$/g)[0]) {
+    case '.pdf':
+      return 'picture_as_pdf'
 
-        var rules = (sheet.cssRules) ? sheet.cssRules : sheet.rules;
+    case '.jpg':
+    case '.jpeg':
+    case '.png':
+    case '.svg':
+      return 'image'
 
-        for(var i2 = 0; i2 < rules.length; ++i2) {
-            var rule = rules[i2];
+    default:
+      return 'insert_drive_file'
+  }
+}
 
-            if(rule.cssText.search("@media print") >= 0)
-                sheet.deleteRule(i2);
+/**
+ * Verifies if an element has a class.
+ *
+ * @param {HTMLElement} element - Element target.
+ * @param {String} className - Class to verify.
+ * @return {Boolean}
+ *
+ * @example
+ *
+ * // <body class='is-large-screen'><body>
+ * hasClass(document.body, 'is-large-screen')
+ * // true
+ */
+function hasClass(element, className) {
+  return element.className.includes(className)
+}
+
+/**
+ * Removes a HTML element.
+ *
+ * @param {HTMLElement} element - Element to delete.
+ *
+ * @example
+ *
+ * // <div id='test'>Test block</div>
+ * removeElement(document.querySelector('#test'))
+ */
+function removeElement(element) {
+  element.parentNode.removeChild(element)
+}
+
+/**
+ * Removes classes from an element.
+ *
+ * @param {HTMLElement} element - Element where classes will be removed.
+ * @param {String} classNames - Space separated classes to remove.
+ *
+ * @example
+ *
+ * // <body class='is-large-screen'><body>
+ * removeClass(document.body, 'is-large-screen')
+ * // <body><body>
+ */
+function removeClass(element, classNames) {
+  for (const className of classNames.split(' ')) {
+    if (!hasClass(element, className)) { continue }
+
+    element.className = element.className
+      .replace(new RegExp(className, 'g'), '')
+      .replace(/ {2,}/g, ' ')
+      .trim()
+  }
+}
+
+/**
+ * Removes unnecessary `@media print` from style sheets. Only supports
+ * internals style sheets.
+ */
+function removeMediaPrint() {
+  const sheets = document.styleSheets
+
+  for (const sheet of sheets) {
+    if (sheet.href) { continue }
+
+    const rules = (sheet.cssRules) ? sheet.cssRules : sheet.rules
+    let nRule = 0
+
+    for (const rule of rules) {
+      if (rule.cssText.includes('@media print')) { sheet.deleteRule(nRule) }
+
+      ++nRule
+    }
+  }
+}
+
+/**
+ * Shows the content that match with the given filter.
+ *
+ * @param {[type]} filter - Filter to show.
+ *
+ * @exaple
+ *
+ * selectFilter('debian')
+ */
+function selectFilter(filter) {
+  let elements
+
+  elements = document.querySelectorAll('.fl.is-visible')
+
+  for (const element of elements) {
+    removeClass(element, 'is-visible')
+  }
+
+  elements = document.querySelectorAll(`.fl-${filter}`)
+
+  for (const element of elements) {
+    addClass(element, 'is-visible')
+  }
+}
+
+/**
+ * Sets up the article options.
+ */
+function setupArticleOptions() {
+  const options = document.querySelector('#options')
+
+  // Main button
+
+  const mainButton = options.querySelector('#options-button')
+
+  updateElement(mainButton, { events: { click: () => {
+    const buttons = options.querySelectorAll('button:not(#options-button)')
+
+    let icon
+
+    if (!hasClass(mainButton, 'open')) {
+      let nButton = 1
+
+      for (const button of buttons) {
+        updateElement(button, { style: { bottom: 115 * (nButton++) + '%' } })
+      }
+
+      icon = 'close'
+    } else {
+      for (const button of buttons) {
+        updateElement(button, { style: { bottom: '0px' } })
+      }
+
+      icon = 'more_vert'
+    }
+
+    toggleClass(mainButton, 'open')
+
+    updateElement(
+      mainButton.querySelector('i.material-icons'),
+      { textContent: icon }
+    )
+  } } })
+
+  // Theme button
+
+  const themeButton = createElement('button', {
+    id: 'theme-button',
+    class: 'mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect ' +
+           'mdl-button--accent',
+    children: [
+      createElement('i', {
+        class: 'material-icons',
+        textContent: 'invert_colors'
+      })
+    ],
+    events: {
+      click: () => {
+        const container = document.querySelector('.mdl-layout')
+
+        if (hasClass(container, 'theme-light')) {
+          snackbar('Dark theme is enabled')
+        } else {
+          snackbar('Light theme is enabled')
         }
+
+        toggleClass(container, 'theme-light theme-dark')
+      }
     }
+  })
+
+  options.appendChild(themeButton)
+  window.componentHandler.upgradeElement(themeButton)
+
+  // Print button
+
+  const printButton = options.querySelector('#print-button')
+  updateElement(printButton, { events: { click: () => window.print() } })
+
+  // Attachments
+
+  const attachmentsMenu = options.querySelector('#attachments-menu')
+
+  for (const file of window.ATTACHMENTS) {
+    attachmentsMenu.appendChild(createElement('a', {
+      href: file.url,
+      download: file.name || '',
+      children: [
+        createElement('li', {
+          class: 'mdl-menu__item',
+          textContent: file.name || file.url,
+          children: [
+            createElement('i', {
+              class: 'material-icons',
+              textContent: file.icon || fileToIcon(file.url)
+            })
+          ]
+        })
+      ]
+    }))
+  }
+
+  if (window.ATTACHMENTS.length === 0) {
+    removeElement(options.querySelector('#attachments-button'))
+  }
 }
 
-function options() {
-    /***:js:`options()`.
+/**
+ * Sets up the external links to open in a new tab.
+ */
+function setupExternalLinks() {
+  const links = document.querySelectorAll('a:not([href^="#"])')
 
-    Setup options.
-    ***/
-
-    // Main button
-    var optionsButton = document.querySelector("#options button:first-child");
-    var optionsIcon = optionsButton.querySelector("i.material-icons");
-
-    optionsButton.addEventListener("click", function () {
-        var buttons = document.querySelectorAll("#options button:not(:first-child), #options a button");
-        var icon;
-
-        // Show buttons
-        if(this.className.search("open") < 0) {
-            for(var i = 0; i < buttons.length; ++i)
-                elementUpdate(buttons[i], {"style": {"bottom": 115 * (i + 1) + "%"}});
-
-            icon = "close";
-        }
-
-        // Hide buttons
-        else {
-            for(var i = 0; i < buttons.length; ++i)
-                elementUpdate(buttons[i], {"style": {"bottom": "0px"}});
-
-            icon = "more_vert";
-        }
-
-        classToggle(this, "open");
-        elementUpdate(optionsIcon, {"textContent": icon});
-    });
-
-    // Theme toggler
-    var themeButton = elementCreate("button", {
-        "class": "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent"
-    });
-    document.querySelector("#options").appendChild(themeButton);
-    componentHandler.upgradeElement(themeButton);
-
-    var icon = elementCreate("i", {
-        "class": "material-icons",
-        "textContent": "invert_colors"
-    });
-    themeButton.appendChild(icon);
-
-    themeButton.addEventListener("click", function () {
-        var container = document.querySelector(".mdl-layout");
-        var message;
-
-        if(container.className.search("theme-dark") < 0)
-            message = "Dark theme is enabled";
-
-        else
-            message = "Dark theme is disabled";
-
-        classToggle(container, "theme-dark");
-        snackbar(message);
-    });
-
-    // Print button
-    var printButton = document.querySelector("#options button.print");
-    printButton.addEventListener("click", function () {
-        print();
-    });
-
-    // Attachments
-    var menu = document.querySelector("#options button.attachments ~ .mdl-menu__container ul.mdl-menu");
-
-    if(window.ATTACHMENTS) {
-        for(var i = 0; i < ATTACHMENTS.length; ++i) {
-            var file = ATTACHMENTS[i];
-
-            var link = elementCreate("a", {
-                "href": file.url,
-                "download": (file.name) ? file.name : ""
-            });
-            menu.appendChild(link);
-
-            var li = elementCreate("li", {
-                "class": "mdl-menu__item",
-                "textContent": (file.name) ? file.name : file.url
-            });
-            link.appendChild(li);
-
-            var icon;
-
-            if(file.icon)
-                icon = file.icon;
-
-            else {
-                switch(file.url.match(/\..+$/g)[0]) {
-                    case ".pdf":
-                        icon = "picture_as_pdf";
-                    break;
-
-                    case ".jpg":
-                    case ".jpeg":
-                    case ".png":
-                    case ".svg":
-                        icon = "image";
-                    break;
-
-                    default:
-                        icon = "insert_drive_file";
-                    break;
-                }
-            }
-
-            var icon = elementCreate("i", {
-                "class": "material-icons",
-                "textContent": icon
-            });
-            li.appendChild(icon);
-        }
-    }
-
-    // Delete button if no attachments given
-    else
-        elementDelete(document.querySelector("#attachments-button"));
+  for (const link of links) {
+    if (link.href) { updateElement(link, { target: '_blank' }) }
+  }
 }
 
-function OSFilter() {
-    /***:js:`OSFilter()`.
+/**
+ * Sets up filters
+ */
+function setupFilters() {
+  const elements = document.querySelectorAll('.fl')
+  const filters = []
+  const pattern = /fl-[\w-]+/g
 
-    Setup the OS filter.
-    ***/
-    var elements = document.querySelectorAll(".os");
-    var osList = [];
-    var re = /os\-[\w\-]+/g;  // OS name pattern
+  // Create filters list
 
-    // Create OS list
-    for(var i = 0; i < elements.length; ++i) {
-        var element = elements[i];
-        var osElement = element.className.match(re).map(function (value) {
-            // Delete ``os-`` from captured groups
-            return value.substr(3);
-        });
+  for (const element of elements) {
+    const elementFilters = element.className.match(pattern)
 
-        // Set the first OS found as default
-        if(i == 0)
-            OSSelect(osElement[0]);
+    for (let filter of elementFilters) {
+      filter = filter.slice(3)
 
-        for(var i2 = 0; i2 < osElement.length; ++i2) {
-            var os = osElement[i2];
+      if (filters.includes(filter)) { continue }
+      filters.push(filter)
+    }
+  }
 
-            if(osList.indexOf(os) < 0)
-                osList.push(os);
+  selectFilter(filters[0])  // Set the first filter found as default
+  filters.sort()
+
+  for (const filter of filters) {
+    const button = createElement('button', {
+      class: 'mdl-button mdl-js-button mdl-button--raised ' +
+             'mdl-button--accent mdl-js-ripple-effect',
+      'data-filter': filter,
+      textContent: filter.toUpperCase(),
+      events: {
+        click: () => {
+          const filter = button.dataset.filter
+
+          selectFilter(filter)
+          snackbar(`Using filter: ${filter.toUpperCase()}`)
         }
-    }
+      }
+    })
 
-    osList.sort();
-
-    for(var i = 0; i < osList.length; ++i) {
-        var os = osList[i];
-
-        var button = elementCreate("button", {
-            "class": "mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect",
-            "data-os": os,
-            "textContent": os.toUpperCase()
-        });
-        document.querySelector("#os_selection").appendChild(button);
-        button.addEventListener("click", function () {
-            var os = this.dataset.os;
-
-            OSSelect(os);
-            snackbar("OS change to " + os.toUpperCase());
-        });
-        componentHandler.upgradeElement(button);
-    }
+    document.querySelector('#filter_selection').appendChild(button)
+    window.componentHandler.upgradeElement(button)
+  }
 }
 
-function OSSelect(os) {
-    /***:js:`OSSelect(os)`.
-
-    :js:`os=<OS name>` (:js:`String`)
-      OS/Distribution to show.
-
-    Show the content of the given OS/distribution.
-
-    .. code:: js
-        :number-lines:
-
-        OSSelect("debian");
-    ***/
-    var elements = document.querySelectorAll(".os:not(.os-" + os + ")");
-
-    for(var i = 0; i < elements.length; ++i)
-        classDelete(elements[i], "is-visible");
-
-    elements = document.querySelectorAll(".os-" + os);
-
-    for(var i = 0; i < elements.length; ++i)
-        classAdd(elements[i], "is-visible");
-}
-
+/**
+ * Shows a message at the bottom of the screen.
+ *
+ * @param {String} message - Message to show.
+ *
+ * @example
+ *
+ * snackbar('Hello world!')
+ */
 function snackbar(message) {
-    /***:js:`snackbar(message)`.
+  const container = document.querySelector('#snackbar')
 
-    :js:`message=<message>` (:js:`String`)
-      Message to show.
-
-    Show a message at screen bottom.
-
-    .. code:: js
-        :number-lines:
-
-        snackbar("Hello world!");
-    ***/
-    var container = document.querySelector("#snackbar");
-    var data = {"message": message};
-
-    container.MaterialSnackbar.showSnackbar(data);
+  container.MaterialSnackbar.showSnackbar({ message })
 }
 
-// Libs
+/**
+ * Toggles classes from an element.
+ *
+ * @param {HTMLElement} element - Element where classes will be toggled.
+ * @param {String} classNames - Space separated classes to toggle.
+ * @return {HTMLElement}
+ *
+ * @example
+ *
+ * // <body class='is-large-screen'><body>
+ * toggleClass(document.body, 'is-large-screen is-small-screen')
+ * // <body class='is-small-screen'><body>
+ */
+function toggleClass(element, classNames) {
+  classNames = classNames.split(' ')
 
-function classAdd(element, classNames) {
-    /***:js:`function classAdd(element, classNames)`.
-
-    :js:`element=<HTML element>` (:js:`HTMLElement` or types based on it)
-      Element where classes will be added.
-
-    :js:`classNames=<class[ ...]>` (:js:`String`)
-      Space separated classes to add.
-
-    Add classes to an element.
-
-    .. code:: js
-        :number-lines:
-
-        // <body><body>
-        classAdd(document.body, "is-large-screen");
-        // <body class="is-large-screen"><body>
-    ***/
-    var classNames = classNames.split(" ");
-    var result = element.className;
-
-    for(var i = 0; i < classNames.length; ++i) {
-        var className = classNames[i];
-
-        if(result.search(className) < 0)
-            result += " " + className;
+  for (const className of classNames) {
+    if (!hasClass(element, className))  {
+      addClass(element, className)
+    } else {
+      removeClass(element, className)
     }
-
-    element.className = result;
+  }
 }
 
-function classDelete(element, classNames) {
-    /***:js:`function classDelete(element, classNames)`.
+/**
+ * Updates a HTML element. There are some special attributes:
+ *
+ * * `children`: iterable of elements to be added as `element`'s children.
+ *
+ * * `events`: object with events names as keys and handlers (or an array of
+ *   handlers) as values
+ *
+ * @param {HTMLElement} element - Element to update.
+ * @param {Object} attributes - Attributes for the element; the `style`
+ *                              attribute must be an object with its
+ *                              properties.
+ * @return {HTMLElement}
+ *
+ * @example
+ *
+ * updateElement(document.body, {
+ *   contenteditable: true,
+ *   style: { backgroundColor: 'green'}
+ * })
+ */
+function updateElement(element, attributes) {
+  for (const [attribute, value] of Object.entries(attributes)) {
+    switch (attribute) {
+      case 'innerHTML':
+      case 'textContent':
+        element[attribute] = value
+        break
 
-    :js:`element=<HTML element>` (:js:`HTMLElement` or types based on it)
-      Element where classes will be deleted.
-
-    :js:`classNames=<class[ ...]>` (:js:`String`)
-      Space separated classes to delete.
-
-    Delete classes from an element.
-
-    .. code:: js
-        :number-lines:
-
-        // <body class="is-large-screen"><body>
-        classDelete(document.body, "is-large-screen");
-        // <body><body>
-    ***/
-    var classNames = classNames.split(" ");
-    var result = element.className;
-
-    for(var i = 0; i < classNames.length; ++i) {
-        var className = classNames[i];
-
-        if(result.search(className) >= 0) {
-            result = result.replace(new RegExp(className, "g"), "");
-            result = result.replace(/ {2,}/g, " ");
-            result = result.trim();
+      case 'style':
+        for (const [property, pValue] of Object.entries(value)) {
+          element[attribute][property] = pValue
         }
-    }
 
-    element.className = result;
-}
+        break
 
-function classToggle(element, classNames) {
-    /***:js:`function classToggle(element, classNames)`.
-
-    :js:`element=<HTML element>` (:js:`HTMLElement` or types based on it)
-      Element where classes will be toggled.
-
-    :js:`classNames=<class[ ...]>` (:js:`String`)
-      Space separated classes to toggle.
-
-    Toggle classes from an element.
-
-    .. code:: js
-        :number-lines:
-
-        // <body class="is-large-screen"><body>
-        classToggle(document.body, "is-large-screen is-small-screen");
-        // <body class="is-small-screen"><body>
-    ***/
-    var classNames = classNames.split(" ");
-
-    for(var i = 0; i < classNames.length; ++i) {
-        var className = classNames[i];
-
-        if(element.className.search(className) < 0)
-            classAdd(element, className);
-
-        else
-            classDelete(element, className);
-    }
-}
-
-function elementCreate(type, attributes) {
-    /***:js:`elementCreate(type, attributes)`.
-
-    :js:`type=<element type>` (:js:`String`)
-      Element type to create.
-
-    :js:`attributes=<tag attributes>` (:js:`Object`)
-      **Optional**. Attributes to add at the new element.
-
-    Create a HTML element. The ``style`` attribute must be an object with the
-    properties.
-
-    :js:`return` (:js:`HTMLElement` or types based on it)
-      Created element.
-
-    .. code:: js
-        :number-lines:
-
-        var attributes = {
-            "type": "text",
-            "value": "Hello world!",
-            "style": {"color": "green"}
-        };
-
-        document.body.appendChild(elementCreate("input", attributes));
-    ***/
-    var element = document.createElement(type);
-
-    if(attributes)
-        elementUpdate(element, attributes);
-
-    return element;
-}
-
-function elementDelete(element) {
-    /***:js:`elementDelete(element)`.
-
-    :js:`element=<HTML element>` (:js:`HTMLElement` or types based on it)
-      Element to delete.
-
-    Delete a HTML element.
-
-    .. code:: js
-        :number-lines:
-
-        // <div id="test">Test block</div>
-        elementDelete(document.querySelector("#test"));
-    ***/
-    element.parentNode.removeChild(element);
-}
-
-function elementUpdate(element, attributes) {
-    /***:js:`elementUpdate(element, attributes)`.
-
-    :js:`element=<HTML element>` (:js:`HTMLElement` or types based on it)
-      Element to update.
-
-    :js:`attributes=<tag attributes>` (:js:`Object`)
-      Attributes to add at the new element.
-
-    Update a HTML element. The ``style`` attribute must be an object with the
-    properties.
-
-    .. code:: js
-        :number-lines:
-
-        var attributes = {
-            "contenteditable": true,
-            "style": {"backgroundColor": "red"}
-        };
-        elementUpdate(document.body, attributes);
-    ***/
-    for(attribute in attributes) {
-        switch(attribute) {
-            case "innerHTML":
-            case "textContent":
-                element[attribute] = attributes[attribute];
-            break;
-
-            case "style":
-                for(subattr in attributes[attribute])
-                    element[attribute][subattr] = attributes[attribute][subattr];
-            break;
-
-            default:
-                element.setAttribute(attribute, attributes[attribute]);
-            break;
+      case 'children':
+        for (const child of value) {
+          element.appendChild(child)
         }
+
+        break
+
+      case 'events':
+        for (const [event, handlers] of Object.entries(value)) {
+          if (handlers instanceof Array) {
+            for (const handler of handlers) {
+              element.addEventListener(event, handler)
+            }
+          } else {
+            element.addEventListener(event, handlers)
+          }
+        }
+
+        break
+
+      default:
+        element.setAttribute(attribute, value)
+        break
     }
+  }
+
+  return element
 }

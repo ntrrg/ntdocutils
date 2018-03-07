@@ -5,13 +5,13 @@
 
 <!-- NtDocutils https://ntrrg.github.io/NtDocutils/ -->
 <!-- Copyright 2017 Miguel Angel Rivera Notararigo -->
-<!-- Licensed under The MIT License. See LICENSE file for full licensing details. -->
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
 
 <meta charset="utf-8"/>
-<meta name="generator" content="Docutils 0.13.1: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
 <title>NtDocutils</title>
 <meta name="author" content="Miguel Angel Rivera Notararigo" />
 
@@ -32,144 +32,142 @@
 
 /* Ribbon */
 
-    .ribbon {
-        background-color: rgb(76, 175, 80);
-    }
+.ribbon {
+  background-color: rgb(76, 175, 80);
+}
 
 /* Article structure */
 
-    /* Roboto - Thin */
-    @font-face {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 100;
-        src: local("Roboto Thin"), local("Roboto-Thin"), url(https://fonts.gstatic.com/s/roboto/v15/2tsd397wLxj96qwHyNIkxPesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-    }
+  /* Roboto - Thin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Roboto Thin"), local("Roboto-Thin"), url(https://fonts.gstatic.com/s/roboto/v15/2tsd397wLxj96qwHyNIkxPesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
-    /* Roboto - Light */
-    @font-face {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 300;
-        src: local("Roboto Light"), local("Roboto-Light"), url(https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-    }
+  /* Roboto - Light */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url(https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
-    /* Roboto - Regular */
-    @font-face {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 400;
-        src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-    }
+  /* Roboto - Regular */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
-    /* Roboto - Medium */
-    @font-face {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 500;
-        src: local("Roboto Medium"), local("Roboto-Medium"), url(https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-    }
+  /* Roboto - Medium */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url(https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
-    /* Roboto - Bold */
-    @font-face {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 700;
-        src: local("Roboto Bold"), local("Roboto-Bold"), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-    }
+  /* Roboto - Bold */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
-    /* Roboto - Black */
-    @font-face {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 900;
-        src: local("Roboto Black"), local("Roboto-Black"), url(https://fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIltXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-    }
+  /* Roboto - Black */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url(https://fonts.gstatic.com/s/roboto/v15/mnpfi9pxYH-Go5UiibESIltXRa8TVwTICgirnJhmVJw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
-    /* Roboto - Italic */
-    @font-face {
-        font-family: "Roboto";
-        font-style: italic;
-        font-weight: 400;
-        src: local("Roboto Italic"), local("Roboto-Italic"), url(https://fonts.gstatic.com/s/roboto/v15/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-    }
+  /* Roboto - Italic */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Roboto Italic"), local("Roboto-Italic"), url(https://fonts.gstatic.com/s/roboto/v15/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
-    /* Roboto - Bold italic */
-    @font-face {
-        font-family: "Roboto";
-        font-style: italic;
-        font-weight: 700;
-        src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url(https://fonts.gstatic.com/s/roboto/v15/t6Nd4cfPRhZP44Q5QAjcC44P5ICox8Kq3LLUNMylGO4.woff2) format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-    }
+  /* Roboto - Bold italic */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"), url(https://fonts.gstatic.com/s/roboto/v15/t6Nd4cfPRhZP44Q5QAjcC44P5ICox8Kq3LLUNMylGO4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
 
-    body {
-        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    }
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
 
 /* Links */
 
-    a {
-        color: rgb(76, 175, 80);
-    }
+a {
+  color: rgb(76, 175, 80);
+}
 
 /* Admonitions */
 
-    div.admonition {
-        background: #424242;
-        color: white !important;
-    }
+div.admonition {
+  background: #424242;
+  color: white !important;
+}
 
-    div.admonition.attention p.admonition-title:after,
-    div.admonition.caution p.admonition-title:after,
-    div.admonition.important p.admonition-title:after,
-    div.admonition.warning p.admonition-title:after {
-        color: yellow;
-    }
+div.admonition.attention p.admonition-title:after,
+div.admonition.caution p.admonition-title:after,
+div.admonition.important p.admonition-title:after,
+div.admonition.warning p.admonition-title:after {
+  color: yellow;
+}
 
-    div.admonition.bug p.admonition-title:after,
-    div.admonition.danger p.admonition-title:after,
-    div.admonition.error p.admonition-title:after {
-        color: red;
-    }
+div.admonition.bug p.admonition-title:after,
+div.admonition.danger p.admonition-title:after,
+div.admonition.error p.admonition-title:after {
+  color: red;
+}
 </style>
 
-<link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.1.0/ntdocutils/themes/mdl/css/minimal.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.1.0/ntdocutils/themes/mdl/css/plain.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.1.0/ntdocutils/themes/mdl/css/ntdocutils.min.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.1.0/ntdocutils/themes/mdl/css/paraiso-light.min.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.1.0/ntdocutils/themes/mdl/css/paraiso-dark.min.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.1.0/ntdocutils/themes/mdl/css/print.min.css' />
+<link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/ntdocutils/themes/mdl/css/minimal.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/ntdocutils/themes/mdl/css/plain.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/ntdocutils/themes/mdl/css/ntdocutils.min.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/ntdocutils/themes/mdl/css/paraiso-light.min.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/ntdocutils/themes/mdl/css/paraiso-dark.min.css' /><link rel='stylesheet' href='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/ntdocutils/themes/mdl/css/print.min.css' />
 
 </head>
 <body>
 <div class="document" id="ntdocutils">
 
-<div class="mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-    <div class="ribbon"></div>
+<div class="mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100 theme-light">
+  <div class="ribbon"></div>
 
-    <main class="mdl-layout__content">
-        <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <main class="mdl-layout__content">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
 
-            <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+      <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
 
 <h1 class="title">NtDocutils</h1>
 
-<p class="subtitle" id="id1">0.1.0</p>
+<p class="subtitle" id="id1">0.2.0</p>
 <dl class="docinfo">
 <dt class="author">Author</dt>
 <dd class="author"><p>Miguel Angel Rivera Notararigo</p></dd>
 <dt class="contact">Contact</dt>
 <dd class="contact"><a class="reference external" href="mailto:ntrrgx&#64;gmail.com">ntrrgx&#64;gmail.com</a></dd>
-<dt class="version">Version</dt>
-<dd class="version">0.1.0</dd>
 <dt class="date">Date</dt>
-<dd class="date">2017-04-06 22:35:00 -04:00</dd>
+<dd class="date">2018-03-06 19:00:00 -04:00</dd>
 <dt class="license">License</dt>
-<dd class="license"><p><a class="reference external" href="https://opensource.org/licenses/MIT">MIT</a></p>
+<dd class="license"><p><a class="reference external" href="https://github.com/ntrrg/NtDocutils/blob/v0.2.0/LICENSE">MIT</a></p>
 </dd>
 </dl>
 <img alt="NtDocutils" class="article-image" src="images/ntdocutils.png" />
@@ -180,26 +178,29 @@ site</a>.</p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#features" id="id12">Features</a></p></li>
-<li><p><a class="reference internal" href="#installation" id="id13">Installation</a></p>
+<li><p><a class="reference internal" href="#features" id="id13">Features</a></p></li>
+<li><p><a class="reference internal" href="#install" id="id14">Install</a></p>
 <ul>
-<li><p><a class="reference internal" href="#from-pypi" id="id14">From PyPI</a></p></li>
+<li><p><a class="reference internal" href="#from-pypi" id="id15">From PyPI</a></p></li>
+<li><p><a class="reference internal" href="#from-source" id="id16">From source</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#usage" id="id15">Usage</a></p>
+<li><p><a class="reference internal" href="#usage" id="id17">Usage</a></p>
 <ul>
-<li><p><a class="reference internal" href="#os-filtering" id="id16">OS filtering</a></p></li>
-<li><p><a class="reference internal" href="#attachments" id="id17">Attachments</a></p></li>
-<li><p><a class="reference internal" href="#theme-customization" id="id18">Theme customization</a></p></li>
-<li><p><a class="reference internal" href="#command-line-reference" id="id19">Command line reference</a></p></li>
+<li><p><a class="reference internal" href="#filtering" id="id18">Filtering</a></p></li>
+<li><p><a class="reference internal" href="#attachments" id="id19">Attachments</a></p></li>
+<li><p><a class="reference internal" href="#printing" id="id20">Printing</a></p></li>
+<li><p><a class="reference internal" href="#theme-customization" id="id21">Theme customization</a></p></li>
+<li><p><a class="reference internal" href="#command-line-reference" id="id22">Command line reference</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#uninstallation" id="id20">Uninstallation</a></p></li>
-<li><p><a class="reference internal" href="#attributions-and-references" id="id21">Attributions and references</a></p></li>
+<li><p><a class="reference internal" href="#uninstall" id="id23">Uninstall</a></p></li>
+<li><p><a class="reference internal" href="#contributing" id="id24">Contributing</a></p></li>
+<li><p><a class="reference internal" href="#acknowledgment" id="id25">Acknowledgment</a></p></li>
 </ul>
 </div>
 <div class="section" id="features">
-<h1><a class="toc-backref" href="#id12">Features</a></h1>
+<h1><a class="toc-backref" href="#id13">Features</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="demo.html">All features</a> from <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> for the <span class="docutils literal">rst2html5.py</span> writer.</p></li>
 </ul>
@@ -207,42 +208,53 @@ site</a>.</p>
 <li><p>Special roles for emojis and keyboard keys (see <a class="reference external" href="demo.html#emojis-and-keyboard-keys">this section</a>).</p></li>
 </ul>
 <ul class="simple">
-<li><p>Filter content by OS and distributions (see <a class="reference internal" href="#os-filtering">this section</a>).</p></li>
+<li><p>Filter content by OS, distributions, categories or any other filters you
+want (see <a class="reference internal" href="#filtering">this section</a>).</p></li>
 </ul>
 <ul class="simple">
-<li><p>Download the attachments (see <a class="reference internal" href="#attachments">this section</a>), print the article and more
-from the <img alt="options-button" class="inline" src="images/options-button.png" style="height: 3em;" /> button.</p></li>
+<li><p>Attachments (see <a class="reference internal" href="#attachments">this section</a>), print friendly (see <a class="reference internal" href="#printing">this section</a>)
+and more from the <img alt="options-button" class="inline" src="images/options-button.png" style="height: 3em;" /> button.</p></li>
 </ul>
 <ul class="simple">
 <li><p>Theme customization (see <a class="reference internal" href="#theme-customization">this section</a>).</p></li>
 </ul>
 </div>
-<div class="section" id="installation">
-<h1><a class="toc-backref" href="#id13">Installation</a></h1>
-<div class="admonition os os-debian note">
-<p class="admonition-title">Note</p>
-<p>If you will install <strong>NtDocutils</strong> without a virtualenv, you will need
-superuser privileges.</p>
+<div class="section" id="install">
+<h1><a class="toc-backref" href="#id14">Install</a></h1>
+<div class="admonition fl fl-debian warning">
+<p class="admonition-title">Warning</p>
+<p>You will need superuser privileges if you don't use a virtualenv.</p>
 </div>
 <p><strong>NtDocutils</strong> requires:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.python.org/">Python</a> 3.4 or above</p></li>
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> 0.13.1 <em>(autoinstalled)</em></p></li>
-<li><p><a class="reference external" href="http://pygments.org/">Pygments</a> 2.2.0 <em>(autoinstalled)</em></p></li>
+<li><p><a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a> 0.14 (autoinstalled)</p></li>
+<li><p><a class="reference external" href="http://pygments.org/">Pygments</a> 2.2.0 (autoinstalled)</p></li>
 </ul>
 <div class="section" id="from-pypi">
-<h2><a class="toc-backref" href="#id14">From PyPI</a></h2>
-<pre class="code sh os os-debian literal-block"><code>pip install <span class="nv">NtDocutils</span><span class="o">==</span><span class="m">0</span>.1.0</code></pre>
-<pre class="code bat os os-windows literal-block"><code>pip install NtDocutils==0.1.0</code></pre>
-<p class="os-debian media-print"><br /></p>
+<h2><a class="toc-backref" href="#id15">From PyPI</a></h2>
+<pre class="code sh fl fl-debian literal-block"><code>pip install <span class="nv">NtDocutils</span><span class="o">==</span><span class="m">0</span>.2.0</code></pre>
+<pre class="code bat fl fl-windows literal-block"><code>pip install NtDocutils==0.2.0</code></pre>
+</div>
+<div class="section" id="from-source">
+<h2><a class="toc-backref" href="#id16">From source</a></h2>
+<pre class="code sh fl fl-debian literal-block"><code>wget -c <span class="s1">'https://github.com/ntrrg/NtDocutils/archive/v0.2.0.tar.gz'</span></code></pre>
+<pre class="code sh fl fl-debian literal-block"><code>tar -xvf NtDocutils-0.2.0.tar.gz</code></pre>
+<pre class="code sh fl fl-debian literal-block"><code><span class="nb">cd</span> NtDocutils-0.2.0</code></pre>
+<pre class="code sh fl fl-debian literal-block"><code>python3 setup.py</code></pre>
+<p class="fl fl-windows">Download an extract the file
+<a class="reference external" href="https://github.com/ntrrg/NtDocutils/archive/v0.2.0.tar.gz">https://github.com/ntrrg/NtDocutils/archive/v0.2.0.tar.gz</a>, then run the
+following commands:</p>
+<pre class="code bat fl fl-windows literal-block"><code><span class="k">cd</span> NtDocutils-0.2.0</code></pre>
+<pre class="code bat fl fl-windows literal-block"><code>python3 setup.py</code></pre>
 </div>
 </div>
 <div class="section" id="usage">
-<h1><a class="toc-backref" href="#id15">Usage</a></h1>
+<h1><a class="toc-backref" href="#id17">Usage</a></h1>
 <p>Basically, you have to do two things:</p>
-<p class="os-debian media-print"><br /></p>
 <ol class="arabic">
 <li><p>Create a <span class="docutils literal">.rst</span> file:</p>
+<p class="fl fl-debian"><br class="media-print"/></p>
 <p><span class="docutils literal">example.rst</span>:</p>
 <pre class="code rest literal-block"><code><span class="ln"> 1 </span><span class="gh">==========</span>
 <span class="ln"> 2 </span><span class="gh">My Article</span>
@@ -259,68 +271,66 @@ superuser privileges.</p>
 <span class="ln">13 </span>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</code></pre>
 </li>
 <li><p>Process your file:</p>
-<pre class="code sh os os-debian literal-block"><code>ntdocutils example.rst example.html</code></pre>
-<pre class="code bat os os-windows literal-block"><code>ntdocutils example.rst example.html</code></pre>
+<pre class="code sh fl fl-debian literal-block"><code>ntdocutils example.rst example.html</code></pre>
+<pre class="code bat fl fl-windows literal-block"><code>ntdocutils example.rst example.html</code></pre>
 </li>
 </ol>
-<p class="os-windows media-print"><div class="media-print" style="page-break-after: always"></div></p>
 <p>And that's it, you already have some like this:</p>
 <object data="example.html" type="text/html" height="400px" width="100%"
     class="media-screen">
-</object><img alt="images/example.png" class="media-print" src="images/example.png" />
+</object><img alt="images/example.png" class="media-print align-center" src="images/example.png" style="height: 33em;" />
 <p>The following sections cover the usage of some utilities to improve your
 article and at the end you can see the <a class="reference internal" href="#command-line-reference">command line reference</a>.</p>
-<div class="section" id="os-filtering">
-<h2><a class="toc-backref" href="#id16">OS filtering</a></h2>
-<p>You can create content for every OS just adding the <span class="docutils literal">os <span class="pre">os-{{</span> OS name }}</span>
-classes in the elements you want filter, <strong>NtDocutils</strong> will create the
-buttons dynamically at the left bottom corner and set the first OS that it
-finds as default. E.g:</p>
-<pre class="code rest literal-block"><code><span class="ln">1 </span><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> os os-debian
+<div class="section" id="filtering">
+<h2><a class="toc-backref" href="#id18">Filtering</a></h2>
+<p>You can filter content just adding the <span class="docutils literal">fl <span class="pre">fl-{{</span> filter name }}</span> classes in
+the elements you want filter, <strong>NtDocutils</strong> will create the buttons
+dynamically at the left bottom corner and set the first filter that it finds
+as default. E.g:</p>
+<pre class="code rest literal-block"><code><span class="ln">1 </span><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> fl fl-debian
 <span class="ln">2 </span>
 <span class="ln">3 </span><span class="gs">**Text for Debian**</span>
 <span class="ln">4 </span>
-<span class="ln">5 </span><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> os os-windows
+<span class="ln">5 </span><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> fl fl-windows
 <span class="ln">6 </span>
 <span class="ln">7 </span><span class="gs">**Text for Windows**</span></code></pre>
 <p>Will result in:</p>
-<p class="os os-debian"><strong>Text for Debian</strong></p>
-<p class="os os-windows"><strong>Text for Windows</strong></p>
+<p class="fl fl-debian"><strong>Text for Debian</strong></p>
+<p class="fl fl-windows"><strong>Text for Windows</strong></p>
 <p>And creates the following buttons:</p>
 <img alt="images/os-selection.png" class="align-center" src="images/os-selection.png" />
-<p class="os-windows"><div class="media-print" style="page-break-after: always"></div></p>
 </div>
 <div class="section" id="attachments">
-<h2><a class="toc-backref" href="#id17">Attachments</a></h2>
+<h2><a class="toc-backref" href="#id19">Attachments</a></h2>
 <p>You can set a list of useful files in the <img alt="attachments-button" class="inline" src="images/attachments-button.png" style="height: 3em;" /> button by
 adding the following lines in your article:</p>
 <pre class="code rest literal-block"><code><span class="ln"> 1 </span><span class="p">..</span> <span class="ow">raw</span><span class="p">::</span> html
 <span class="ln"> 2 </span>
 <span class="ln"> 3 </span>    &lt;script&gt;
-<span class="ln"> 4 </span>        ATTACHMENTS = [
-<span class="ln"> 5 </span>            {
-<span class="ln"> 6 </span>                &quot;url&quot;: &quot;NtDocutils.rst&quot;,
-<span class="ln"> 7 </span>                &quot;name&quot;: &quot;NtDocutils 0.1.0.rst&quot;,
-<span class="ln"> 8 </span>                &quot;icon&quot;: &quot;code&quot;
-<span class="ln"> 9 </span>            }
-<span class="ln">10 </span>        ];
+<span class="ln"> 4 </span>      ATTACHMENTS = [
+<span class="ln"> 5 </span>        {
+<span class="ln"> 6 </span>          url: 'NtDocutils.rst',
+<span class="ln"> 7 </span>          name: 'NtDocutils 0.2.0.rst',
+<span class="ln"> 8 </span>          icon: 'code'
+<span class="ln"> 9 </span>        }
+<span class="ln">10 </span>      ];
 <span class="ln">11 </span>    &lt;/script&gt;</code></pre>
 <div class="admonition syntax">
 <p class="admonition-title">Syntax</p>
-<p><span class="docutils literal">ATTACHMENTS</span> is a global array, it store the files list showed in
+<p><span class="docutils literal">ATTACHMENTS</span> is a global array, it store the files list showed in the
 <img alt="attachments-button" class="inline" src="images/attachments-button.png" style="height: 3em;" /> button, each file must be defined as an object with
 the following properties:</p>
 <dl class="simple">
-<dt><span class="docutils literal">url</span> ( <code class="js"><span class="nb">String</span></code> )</dt>
+<dt><span class="docutils literal">url</span> (string)</dt>
 <dd><p>URL to the file, could be an external link.</p>
 </dd>
-<dt><span class="docutils literal">name</span> ( <code class="js"><span class="nb">String</span></code> )</dt>
+<dt><span class="docutils literal">name</span> (string)</dt>
 <dd><p><strong>Optional</strong>. Name displayed at the list, also overwrites the attachment
 name.</p>
 </dd>
 </dl>
 <dl class="simple">
-<dt><span class="docutils literal">icon</span> ( <code class="js"><span class="nb">String</span></code> )</dt>
+<dt><span class="docutils literal">icon</span> (string)</dt>
 <dd><p><strong>Optional</strong>. <a class="reference external" href="https://material.io/icons/">Material icon</a> displayed at the list, by default
 <strong>NtDocutils</strong> uses an icon related to the file extension.</p>
 </dd>
@@ -328,24 +338,60 @@ name.</p>
 <pre class="code text literal-block"><code><span class="ln"> 1 </span>.. raw:: html
 <span class="ln"> 2 </span>
 <span class="ln"> 3 </span>    &lt;script&gt;
-<span class="ln"> 4 </span>        ATTACHMENTS = [
-<span class="ln"> 5 </span>            {
-<span class="ln"> 6 </span>                &quot;url&quot;: URL,
-<span class="ln"> 7 </span>                &quot;name&quot;: DISPLAY_NAME,
-<span class="ln"> 8 </span>                &quot;icon&quot;: ICON_NAME
-<span class="ln"> 9 </span>            },
-<span class="ln">10 </span>            ...
-<span class="ln">11 </span>            {
-<span class="ln">12 </span>                &quot;url&quot;: URL_N,
-<span class="ln">13 </span>                &quot;name&quot;: DISPLAY_NAME_N,
-<span class="ln">14 </span>                &quot;icon&quot;: ICON_NAME_N
-<span class="ln">15 </span>            }
-<span class="ln">16 </span>        ];
+<span class="ln"> 4 </span>      ATTACHMENTS = [
+<span class="ln"> 5 </span>        {
+<span class="ln"> 6 </span>          &quot;url&quot;: URL,
+<span class="ln"> 7 </span>          &quot;name&quot;: DISPLAY_NAME,
+<span class="ln"> 8 </span>          &quot;icon&quot;: ICON_NAME
+<span class="ln"> 9 </span>        },
+<span class="ln">10 </span>        ...
+<span class="ln">11 </span>        {
+<span class="ln">12 </span>          &quot;url&quot;: URL_N,
+<span class="ln">13 </span>          &quot;name&quot;: DISPLAY_NAME_N,
+<span class="ln">14 </span>          &quot;icon&quot;: ICON_NAME_N
+<span class="ln">15 </span>        }
+<span class="ln">16 </span>      ];
 <span class="ln">17 </span>    &lt;/script&gt;</code></pre>
 </div>
 </div>
+<div class="section" id="printing">
+<h2><a class="toc-backref" href="#id20">Printing</a></h2>
+<p>There are some special classes that let you improve the way your article is
+printed when something goes wrong; for example, some content doesn't fit at the
+page or simply can't be showed as it should in paper. These classes are:</p>
+<ul class="simple">
+<li><p><code class="css"><span class="p">.</span><span class="nc">media-screen</span></code>: shows the element just in a screen.</p></li>
+<li><p><code class="css"><span class="p">.</span><span class="nc">media-print</span></code>: shows the element just in paper.</p></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<p>White spaces for paper (useful for ensure printing format):</p>
+<pre class="code rst literal-block"><code><span class="ln"> 1 </span><span class="cp">.. Page break
+</span><span class="ln"> 2 </span><span class="cp">
+</span><span class="ln"> 3 </span><span class="cp"></span><span class="p">..</span> <span class="nt">|pb|</span> <span class="ow">raw</span><span class="p">::</span> html
+<span class="ln"> 4 </span>
+<span class="ln"> 5 </span>    &lt;div class=&quot;media-print&quot; style=&quot;page-break-after: always&quot;&gt;&lt;/div&gt;
+<span class="ln"> 6 </span>
+<span class="ln"> 7 </span><span class="cp">.. Line break
+</span><span class="ln"> 8 </span><span class="cp">
+</span><span class="ln"> 9 </span><span class="cp"></span><span class="p">..</span> <span class="nt">|lb|</span> <span class="ow">raw</span><span class="p">::</span> html
+<span class="ln">10 </span>
+<span class="ln">11 </span>    &lt;br class=&quot;media-print&quot;/&gt;</code></pre>
+<p>Display content for specific device:</p>
+<pre class="code rst literal-block"><code><span class="cp">.. Screen
+
+</span><span class="p">..</span> <span class="ow">raw</span><span class="p">::</span> html
+
+    &lt;object data=&quot;example.html&quot; type=&quot;text/html&quot; height=&quot;400px&quot; width=&quot;100%&quot;
+        class=&quot;media-screen&quot;&gt;
+    &lt;/object&gt;
+
+<span class="cp">.. Paper
+
+</span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> images/example.png
+    <span class="nc">:class:</span> <span class="nf">media-print</span></code></pre>
+</div>
 <div class="section" id="theme-customization">
-<h2><a class="toc-backref" href="#id18">Theme customization</a></h2>
+<h2><a class="toc-backref" href="#id21">Theme customization</a></h2>
 <p>You can use the <a class="reference external" href="https://getmdl.io/customize/">customize tool</a> from the <a class="reference external" href="https://getmdl.io/">MDL</a> site to get a custom
 <span class="docutils literal">.css</span> with your preferred colors, after that, you must setup some styles
 by creating a file with the following <a class="reference external" href="attachments/customize.css">template</a>:</p>
@@ -367,20 +413,20 @@ by creating a file with the following <a class="reference external" href="attach
 <span class="ln">90 </span>
 <span class="ln">91 </span><span class="c">/* ... */</span></code></pre>
 <p>The recommended color for the ribbon background (line 4) is the primary color
-from the theme, you can get this value searching the property <code class="css"><span class="nt">color</span></code> at
-the rule <code class="css"><span class="p">.</span><span class="nc">mdl-button</span><span class="p">.</span><span class="nc">mdl-button--colored</span></code> in the file you downloaded
-from <a class="reference external" href="https://getmdl.io/">MDL</a> (<span class="docutils literal">material.min.css</span>). The links (line 88) uses the accent color
-from the theme, but in some cases this make them a little unreadable, so you
-could uncomment it and use the primary color. You can feel free editing the
-others rules, but usually they will be fine with that values. When you are
-ready, you have to run <strong>NtDocutils</strong> with the following option:</p>
-<pre class="code sh os os-debian literal-block"><code>ntdocutils --stylesheet<span class="o">=</span>path/to/material.min.css,path/to/customize.css <span class="se">\
+from the theme, you can get this value searching the property <span class="docutils literal">color</span> at the
+rule <span class="docutils literal"><span class="pre">.mdl-button.mdl-button--colored</span></span> in the file you downloaded from <a class="reference external" href="https://getmdl.io/">MDL</a>
+(<span class="docutils literal">material.min.css</span>). The links (line 88) use the accent color from the
+theme, but in some cases this make them a little unreadable, so you could
+uncomment it and use the primary color. You should feel free editing the others
+rules, but usually they will be fine with that values. When you are ready, you
+have to run <strong>NtDocutils</strong> with the following option:</p>
+<pre class="code sh fl fl-debian literal-block"><code>ntdocutils --stylesheet<span class="o">=</span>path/to/material.min.css,path/to/customize.css <span class="se">\
 </span>source.rst destination.html</code></pre>
-<pre class="code bat os os-windows literal-block"><code>ntdocutils --stylesheet=path/to/material.min.css,path/to/customize.css \
+<pre class="code bat fl fl-windows literal-block"><code>ntdocutils --stylesheet=path/to/material.min.css,path/to/customize.css \
 source.rst destination.html</code></pre>
 </div>
 <div class="section" id="command-line-reference">
-<h2><a class="toc-backref" href="#id19">Command line reference</a></h2>
+<h2><a class="toc-backref" href="#id22">Command line reference</a></h2>
 <pre class="code text literal-block"><code>ntdocutils [-h] [-V] [-S SERVER] SOURCE DESTINATION</code></pre>
 <dl class="option-list">
 <dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
@@ -390,103 +436,124 @@ source.rst destination.html</code></pre>
 <dd><p>Shows the <strong>NtDocutils</strong> version.</p>
 </dd>
 <dt><kbd><span class="option">-S <var>SERVER</var></span>, <span class="option">--server <var>SERVER</var></span></kbd></dt>
-<dd><p>Server where assets are hosted. If <span class="docutils literal">file</span> is passed as value, it will
-activate the offline mode, this will create a directory with the theme
-name in the <span class="docutils literal">DESTINATION</span> parent folder and stores the necessary assets
-in there.</p>
+<dd><p>Server from where assets will be downloaded. If <span class="docutils literal">local</span> is passed as
+value, it will activate the offline mode, this will create a directory
+with the theme name in the <span class="docutils literal">DESTINATION</span> parent folder and stores the
+necessary assets in there.</p>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>All the options from the <span class="docutils literal">rst2html.py</span> writer are available.</p>
+<p>All options from the <span class="docutils literal">rst2html.py</span> writer are available.</p>
 </div>
 </div>
 </div>
-<div class="section" id="uninstallation">
-<h1><a class="toc-backref" href="#id20">Uninstallation</a></h1>
-<div class="admonition os os-debian note">
-<p class="admonition-title">Note</p>
-<p>If you did install <strong>NtDocutils</strong> without a virtualenv, you will need
-superuser privileges.</p>
+<div class="section" id="uninstall">
+<h1><a class="toc-backref" href="#id23">Uninstall</a></h1>
+<div class="admonition fl fl-debian warning">
+<p class="admonition-title">Warning</p>
+<p>You will need superuser privileges if you didn't use a virtualenv.</p>
 </div>
-<p>Should be enough with this <span class="emoji">😅</span>:</p>
-<pre class="code sh os os-debian literal-block"><code>pip uninstall NtDocutils</code></pre>
-<pre class="code bat os os-windows literal-block"><code>pip uninstall NtDocutils</code></pre>
-<p><div class="media-print" style="page-break-after: always"></div></p>
+<p>Should be enough with this:</p>
+<pre class="code sh fl fl-debian literal-block"><code>pip uninstall NtDocutils</code></pre>
+<pre class="code bat fl fl-windows literal-block"><code>pip uninstall NtDocutils</code></pre>
+<p class="fl fl-windows"><br class="media-print"/></p>
 </div>
-<div class="section" id="attributions-and-references">
-<h1><a class="toc-backref" href="#id21">Attributions and references</a></h1>
-<p><strong>NtDocutils</strong> uses:</p>
+<div class="section" id="contributing">
+<h1><a class="toc-backref" href="#id24">Contributing</a></h1>
+<p>See the <a class="reference external" href="https://github.com/ntrrg/NtDocutils/blob/v0.2.0/CONTRIBUTING.md">contribution guide</a> for more information.</p>
+</div>
+<div class="section" id="acknowledgment">
+<h1><a class="toc-backref" href="#id25">Acknowledgment</a></h1>
+<p>Working on this project I use/used:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> and <a class="reference external" href="http://docutils.sourceforge.net/">Docutils</a></p></li>
-</ul>
-<ul class="simple">
-<li><p><a class="reference external" href="https://getmdl.io/">Material Design Lite</a></p></li>
+<li><p><a class="reference external" href="https://www.debian.org/">Debian</a></p></li>
+<li><p><a class="reference external" href="https://xfce.org/">XFCE</a></p></li>
+<li><p><a class="reference external" href="ext3](https://www.sublimetext.com/3">Sublime</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/chrome/browser/desktop/index.html">Chrome</a></p></li>
+<li><p><a class="reference external" href="https://gnometerminator.blogspot.com/p/introduction.html">Terminator</a></p></li>
+<li><p><a class="reference external" href="http://www.zsh.org/">Zsh</a></p></li>
+<li><p><a class="reference external" href="https://git-scm.com/">Git</a></p></li>
+<li><p><a class="reference external" href="http://editorconfig.org/">EditorConfig</a></p></li>
+<li><p><a class="reference external" href="https://github.com">Github</a></p></li>
+<li><p><a class="reference external" href="https://inkscape.org/en/">Inkscape</a></p></li>
+<li><p><a class="reference external" href="https://www.gimp.org/">GIMP</a></p></li>
+<li><p><a class="reference external" href="https://material.io/icons/">Material Icons</a></p></li>
 <li><p><a class="reference external" href="https://fonts.google.com/specimen/Roboto">Roboto</a></p></li>
-<li><p><a class="reference external" href="https://material.io/icons/">Material icons</a></p></li>
+<li><p><a class="reference external" href="https://rawgit.com/">RawGit</a></p></li>
 </ul>
 <p><strong>Docutils Team.</strong> <em>reStructuredText.</em> <a class="reference external" href="http://docutils.sourceforge.net/rst.html">http://docutils.sourceforge.net/rst.html</a></p>
-<p><strong>Mozilla Developer Network.</strong> <em>JavaScript | MDN.</em> <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a></p>
+<p><strong>Mozilla Developer Network.</strong> <em>JavaScript.</em> <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a></p>
 <script>
-    ATTACHMENTS = [
-        {
-            "url": "NtDocutils.rst",
-            "name": "NtDocutils 0.1.0.rst",
-            "icon": "code"
-        },
-        {
-            "url": "attachments/ntdocutils_debian.pdf",
-            "name": "NtDocutils 0.1.0 (Debian).pdf"
-        },
-        {
-            "url": "attachments/ntdocutils_windows.pdf",
-            "name": "NtDocutils 0.1.0 (Windows).pdf"
-        }
-    ];
+  ATTACHMENTS = [
+    {
+      url: 'NtDocutils.rst',
+      name: 'NtDocutils 0.2.0.rst',
+      icon: 'code'
+    },
+    {
+      url: 'attachments/ntdocutils_debian.pdf',
+      name: 'NtDocutils 0.2.0 (Debian).pdf'
+    },
+    {
+      url: 'attachments/ntdocutils_windows.pdf',
+      name: 'NtDocutils 0.2.0 (Windows).pdf'
+    }
+  ];
 </script></div>
 
-            </div>
+      </div>
+    </div>
+
+    <footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer__left-section">
+        <a href="https://github.com/ntrrg/NtDocutils">
+          <strong class="mdl-logo">NtDocutils</strong>
+        </a>
+      </div>
+
+      <div class="mdl-mini-footer__right-section">
+        <br class="mdl-layout--small-screen-only"/>
+
+        <div>
+          Copyright © 2017
+          <a href="https://github.com/ntrrg">@ntrrg</a>
         </div>
 
-        <footer class="mdl-mini-footer">
-            <div class="mdl-mini-footer__left-section">
-                <a href="https://github.com/ntrrg/NtDocutils"><strong class="mdl-logo">NtDocutils</strong></a>
-            </div>
+        <div>
+          Licensed under <a href="https://github.com/ntrrg/NtDocutils/blob/v0.2.0/LICENSE">The MIT License</a>
+        </div>
 
-            <div class="mdl-mini-footer__right-section">
-                <br class="mdl-layout--small-screen-only" />
-                <div>Copyright © 2017 Miguel Angel Rivera Notararigo</div>
-                <div>Licensed under <a href="https://opensource.org/licenses/MIT">The MIT License</a></div>
-                <div>Powered by <a href="http://docutils.sourceforge.net/">Docutils</a> and <a href="https://getmdl.io/">MDL</a></div>
-            </div>
-        </footer>
-    </main>
+        <div>Powered by <a href="http://docutils.sourceforge.net/">Docutils</a> and <a href="https://getmdl.io/">MDL</a></div>
+      </div>
+    </footer>
+  </main>
 
-    <div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
-        <div class="mdl-snackbar__text"></div>
-        <button class="mdl-snackbar__action" type="button"></button>
-    </div>
+  <div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
+  </div>
 
-    <div id="os_selection"></div>
+  <div id="filter_selection"></div>
 
-    <div id="options">
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent">
-            <i class="material-icons">more_vert</i>
-        </button>
+  <div id="options">
+    <button id="options-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent">
+      <i class="material-icons">more_vert</i>
+    </button>
 
-        <button id="attachments-button" class="attachments mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent" data-n="1">
-            <i class="material-icons">attach_file</i>
-        </button>
+    <button id="attachments-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent">
+      <i class="material-icons">attach_file</i>
+    </button>
 
-        <ul class="attachments-menu mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect" data-mdl-for="attachments-button"></ul>
+    <ul id="attachments-menu" data-mdl-for="attachments-button"class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"></ul>
 
-        <button class="print mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent" data-n="1">
-            <i class="material-icons">print</i>
-        </button>
-    </div>
+    <button id="print-button" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent">
+      <i class="material-icons">print</i>
+    </button>
+  </div>
 </div>
 
-<script type='text/javascript' src='https://code.getmdl.io/1.3.0/material.min.js'></script><script type='text/javascript' src='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.1.0/ntdocutils/themes/mdl/js/ntdocutils.min.js'></script>
+<script type='text/javascript' src='https://code.getmdl.io/1.3.0/material.min.js'></script><script type='text/javascript' src='https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/ntdocutils/themes/mdl/js/ntdocutils.min.js'></script>
 
 </div>
 </body>
