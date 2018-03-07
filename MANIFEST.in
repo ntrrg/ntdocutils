@@ -1,5 +1,4 @@
-include CHANGELOG.rst
-include CONTRIBUTING.rst
+include NEWS.md
 include LICENSE
 recursive-include ntdocutils/themes *
 global-exclude __pycache__

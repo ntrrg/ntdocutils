@@ -1,6 +1,5 @@
 # NtDocutils https://ntrrg.github.io/NtDocutils/
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
-# Licensed under The MIT License. See LICENSE file for full licensing details.
 
 """MDL theme."""
 
@@ -13,45 +12,49 @@ from ntdocutils.writer import Writer as NtDocutilsWriter
 
 
 class Writer(NtDocutilsWriter):
-    """Create a MDL theme writer."""
-
-    server = "https://cdn.rawgit.com/ntrrg/NtDocutils/v0.1.0/ntdocutils/" \
-             "themes/mdl"
+    """Creates a MDL theme writer."""
 
     theme_path = path.dirname(path.abspath(__file__))
     theme = path.basename(theme_path)
 
-    def argv(self):
-        """Generate the optionals arguments for Docutils."""
+    def __init__(self, server):
+        if not server:
+            server = "https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/" \
+                     "ntdocutils/themes/mdl"
 
-        template = path.join(self.theme_path, "template.html")
-        material = path.join(self.theme_path, "css/material.min.css")
+        NtDocutilsWriter.__init__(self, server)
 
-        if self.server != "file":
+        self.docutils_argv["template"] = path.join(
+            self.theme_path,
+            "template.html"
+        )
+
+        if self.server != "local":
             customize = path.join(self.theme_path, "css/customize.css")
 
         else:
-            customize = path.join(self.theme_path, "css/customize-offline.css")
+            customize = path.join(
+                self.theme_path,
+                "css/customize-offline.css"
+            )
 
-        self.docutils_argv["template"] = template
-        self.docutils_argv["stylesheet"] = "{},{}".format(material, customize)
-
-        return NtDocutilsWriter.argv(self)
+        self.docutils_argv["stylesheet"] = "{},{}".format(
+            path.join(self.theme_path, "css/material.min.css"),
+            customize
+        )
 
     def assets(self):
-        """Generate the assets list for the template."""
-
         assets = {}
 
         # Templates for assets
         stylesheet = "<link rel='stylesheet' href='{}' />"
         script = "<script type='text/javascript' src='{}'></script>"
 
-        if self.server != "file":
+        if self.server != "local":
             server = self.server
 
-            material_icons = "https://fonts.googleapis.com/icon" \
-                             "?family=Material+Icons"
+            material_icons = "https://fonts.googleapis.com/icon?family=" \
+                             "Material+Icons"
 
             material_js = "https://code.getmdl.io/1.3.0/material.min.js"
 
@@ -82,8 +85,6 @@ class Writer(NtDocutilsWriter):
         return assets
 
     def offline_mode(self, destination):
-        """Create offline assets in ``destination`` parent folder."""
-
         dest_dir = path.join(
             path.dirname(path.abspath(destination)),
             self.theme

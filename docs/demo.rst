@@ -6,8 +6,6 @@
 .. role:: py(code)
     :language: python3
 
-
-
 ===============
 NtDocutils demo
 ===============
@@ -34,9 +32,9 @@ Subtitle
     Centro Empresarial Gran Mundo
     Piso 7, oficina 7-3
 
-:Version: 0.1.0
-:Date: 2017-03-28 17:15:00 -04:00
-:License: `MIT <https://opensource.org/licenses/MIT>`_
+:Version: 0.2.0
+:Date: 2018-03-06 19:00:00 -04:00
+:License: `MIT <https://github.com/ntrrg/NtDocutils/blob/v0.2.0/LICENSE>`_
 
 .. image:: images/ntdocutils.png
     :class: article-image
@@ -61,12 +59,12 @@ Emojis and keyboard keys
 
     :kbd:`Ctrl` + :kbd:`Alt` + :kbd:`Del`
 
+|pb|
+
 Titles and sections
 ===================
 
 You can see it in this document :emoji:`😂`.
-
-|bp|
 
 Paragraphs
 ==========
@@ -144,6 +142,7 @@ Wide images
 
 .. image:: images/merida.jpg
     :class: wide
+    :height: 25em
 
 .. code:: rest
     :number-lines:
@@ -151,23 +150,26 @@ Wide images
     .. image:: images/merida.jpg
         :class: wide
 
-|bp|
+|pb|
 
 Regular images
 --------------
 
 .. image:: images/luffy.jpg
+    :height: 11em
 
 Centered images
 ---------------
 
 .. image:: images/luffy.jpg
+    :height: 11em
     :align: center
 
 Left aligned images
 -------------------
 
 .. image:: images/luffy.jpg
+    :height: 11em
     :align: left
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -181,6 +183,7 @@ Right aligned images
 --------------------
 
 .. image:: images/luffy.jpg
+    :height: 11em
     :align: right
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -197,18 +200,18 @@ Regular figures
 ---------------
 
 .. figure:: images/luffy.jpg
+    :height: 10em
 
     Monkey D. Luffy
 
     Mugiwara Kaizoku-Dan no Senchou.
-
-|bp|
 
 Centered figures
 ----------------
 
 .. figure:: images/luffy.jpg
     :align: center
+    :height: 10em
 
     Monkey D. Luffy
 
@@ -219,6 +222,7 @@ Left aligned figures
 
 .. figure:: images/luffy.jpg
     :align: left
+    :height: 10em
 
     Monkey D. Luffy
 
@@ -231,13 +235,12 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-|bp|
-
 Right aligned figures
 ---------------------
 
 .. figure:: images/luffy.jpg
     :align: right
+    :height: 10em
 
     Monkey D. Luffy
 
@@ -278,7 +281,7 @@ a. One.
 A. One.
 #. Two.
 
-|bp|
+|pb|
 
 Definition lists
 ----------------
@@ -306,10 +309,19 @@ Options lists
 -a  Short.
 -b <arg>  With an argument.
 -c <arg[,...]>  With an arguments.
---a-larga  Long.
---b-larga=<arg>  With an argument.
---b-larga=<arg[,...]>  With an arguments.
---opcion-doble, -o  Double style.
+--a-long  Long.
+--b-long=<arg>  With an argument.
+--b-long=<arg[,...]>  With an arguments.
+--opcion-double, -o  Double style.
+
+|pb|
+|lb|
+
+.. class:: exclusive
+
+    --d-option  Incompatible with e
+    --e-option  Incompatible with d
+
 /o  MS-DOS_ like.
 
 Tables
@@ -340,6 +352,8 @@ Blockquotes
 
     -- Nomen Nescio
 
+|pb|
+
 Footnotes
 ---------
 
@@ -359,9 +373,33 @@ Citations
 Math formulas
 =============
 
+See https://en.wikibooks.org/wiki/LaTeX/Mathematics.
+
 .. math::
 
-    E=mc^2
+    E = mc^2
+
+----
+
+.. math::
+
+    \frac{n!}{k!(n-k)!} = \binom{n}{k}
+
+----
+
+.. math::
+
+    a = 5
+
+    b = 3
+
+    a^2 - b^2 = (a - b)(a + b)
+
+    5^2 - 3^2 = (5 - 3)(5 + 3)
+
+    5^2 - 3^2 = 2 \times 8
+
+    5^2 - 3^2 = 16
 
 Line blocks
 ===========
@@ -461,8 +499,7 @@ Side bars
 .. sidebar:: Title
     :subtitle: Subtitle
 
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
 Literals
 ========
@@ -472,18 +509,17 @@ Lineal literals
 
 Inline literal ``print("Hellow world!")``.
 
-|bp|
-
 Block literals
 --------------
 
 Code::
 
     def my_function():
-        """Description of ``my_function()`` function.
+        """
+        Description of ``my_function()`` function.
 
-        ``return str()``
-          Description of returned value.
+        returns
+          string - Description of returned value.
         """
         return "Python in reStructuredText"
 
@@ -504,35 +540,36 @@ Block syntax highlighting
     :number-lines:
 
     def my_function():
-        """Description of ``my_function()`` function.
+        """
+        Description of ``my_function()`` function.
 
-        ``return str()``
-          Description of returned value.
+        returns
+          string - Description of returned value.
         """
         return "Python in reStructuredText"
 
     print(my_function())
 
-
-
-.. Raw content
-
 .. raw:: html
 
     <script>
-        ATTACHMENTS = [
-            {
-                "url": "demo.rst",
-                "name": "NtDocutils 0.1.0 - Demo.rst",
-                "icon": "code"
-            },
-            {
-                "url": "attachments/demo.pdf",
-                "name": "NtDocutils 0.1.0 - Demo.pdf"
-            }
-        ];
+      ATTACHMENTS = [
+        {
+          url: 'demo.rst',
+          name: 'NtDocutils 0.2.0 - Demo.rst',
+          icon: 'code'
+        },
+        {
+          url: 'attachments/demo.pdf',
+          name: 'NtDocutils 0.2.0 - Demo.pdf'
+        }
+      ];
     </script>
 
-.. |bp| raw:: html
+.. |pb| raw:: html
 
     <div class="media-print" style="page-break-after: always"></div>
+
+.. |lb| raw:: html
+
+    <br class="media-print"/>
