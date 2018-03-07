@@ -3,3 +3,4 @@
 
 * Upgraded Docutils to 0.14
 * The CLI option `--server` now receives `local` instead `file`
+* OS filtering (`.os`) was replaced by general filtering (`.fl`)

@@ -17,11 +17,11 @@ class Writer(NtDocutilsWriter):
     theme_path = path.dirname(path.abspath(__file__))
     theme = path.basename(theme_path)
 
-    def __init__(
-            self,
-            server="https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/"
-                   "ntdocutils/themes/mdl"
-    ):
+    def __init__(self, server):
+        if not server:
+            server = "https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.0/" \
+                     "ntdocutils/themes/mdl"
+
         NtDocutilsWriter.__init__(self, server)
 
         self.docutils_argv["template"] = path.join(

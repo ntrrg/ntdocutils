@@ -9,7 +9,7 @@
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: License
-    :target: https://opensource.org/licenses/MIT
+    :target: https://github.com/ntrrg/NtDocutils/blob/v0.2.0/LICENSE
 
 __ https://getmdl.io/
 

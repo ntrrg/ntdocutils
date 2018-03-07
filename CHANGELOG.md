@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * `local` instead `file` in the `--server` CLI option
 * Improved source code structure
 * Improved documentation
+* Migrated to ES6 syntax
+* OS filtering (`.os`) was replaced by general filtering (`.fl`)
 
 ## 0.1.0
 

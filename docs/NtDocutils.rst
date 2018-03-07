@@ -64,7 +64,7 @@ Install
 =======
 
 .. warning::
-    :class: os os-debian
+    :class: fl fl-debian
 
     You will need superuser privileges if you don't use a virtualenv.
 
@@ -78,19 +78,19 @@ From PyPI
 ---------
 
 .. code:: sh
-    :class: os os-debian
+    :class: fl fl-debian
 
     pip install NtDocutils==0.2.0
 
 .. code:: bat
-    :class: os os-windows
+    :class: fl fl-windows
 
     pip install NtDocutils==0.2.0
 
 From source
 -----------
 
-.. class:: os os-debian
+.. class:: fl fl-debian
 
     .. code:: sh
 
@@ -108,7 +108,7 @@ From source
 
         python3 setup.py
 
-.. class:: os os-windows
+.. class:: fl fl-windows
 
     Download an extract the file
     https://github.com/ntrrg/NtDocutils/archive/v0.2.0.tar.gz, then run the
@@ -129,7 +129,7 @@ Basically, you have to do two things:
 
 #. Create a ``.rst`` file:
 
-   .. class:: os os-debian
+   .. class:: fl fl-debian
 
    |lb|
 
@@ -142,12 +142,12 @@ Basically, you have to do two things:
 #. Process your file:
 
    .. code:: sh
-       :class: os os-debian
+       :class: fl fl-debian
 
        ntdocutils example.rst example.html
 
    .. code:: bat
-       :class: os os-windows
+       :class: fl fl-windows
 
        ntdocutils example.rst example.html
 
@@ -188,11 +188,11 @@ as default. E.g:
 
 Will result in:
 
-.. class:: os os-debian
+.. class:: fl fl-debian
 
 **Text for Debian**
 
-.. class:: os os-windows
+.. class:: fl fl-windows
 
 **Text for Windows**
 
@@ -359,13 +359,13 @@ rules, but usually they will be fine with that values. When you are ready, you
 have to run **NtDocutils** with the following option:
 
 .. code:: sh
-    :class: os os-debian
+    :class: fl fl-debian
 
     ntdocutils --stylesheet=path/to/material.min.css,path/to/customize.css \
     source.rst destination.html
 
 .. code:: bat
-    :class: os os-windows
+    :class: fl fl-windows
 
     ntdocutils --stylesheet=path/to/material.min.css,path/to/customize.css \
     source.rst destination.html
@@ -397,23 +397,23 @@ Uninstall
 =========
 
 .. warning::
-    :class: os os-debian
+    :class: fl fl-debian
 
     You will need superuser privileges if you didn't use a virtualenv.
 
 Should be enough with this:
 
 .. code:: sh
-    :class: os os-debian
+    :class: fl fl-debian
 
     pip uninstall NtDocutils
 
 .. code:: bat
-    :class: os os-windows
+    :class: fl fl-windows
 
     pip uninstall NtDocutils
 
-.. class:: os os-windows
+.. class:: fl fl-windows
 
 |lb|
 
@@ -470,17 +470,17 @@ Working on this project I use/used:
     <script>
       ATTACHMENTS = [
         {
-          "url": "NtDocutils.rst",
-          "name": "NtDocutils 0.2.0.rst",
-          "icon": "code"
+          url: 'NtDocutils.rst',
+          name: 'NtDocutils 0.2.0.rst',
+          icon: 'code'
         },
         {
-          "url": "attachments/ntdocutils_debian.pdf",
-          "name": "NtDocutils 0.2.0 (Debian).pdf"
+          url: 'attachments/ntdocutils_debian.pdf',
+          name: 'NtDocutils 0.2.0 (Debian).pdf'
         },
         {
-          "url": "attachments/ntdocutils_windows.pdf",
-          "name": "NtDocutils 0.2.0 (Windows).pdf"
+          url: 'attachments/ntdocutils_windows.pdf',
+          name: 'NtDocutils 0.2.0 (Windows).pdf'
         }
       ];
     </script>
