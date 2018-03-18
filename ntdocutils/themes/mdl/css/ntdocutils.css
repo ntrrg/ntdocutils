@@ -23,6 +23,16 @@
   .media-print {
     display: none !important;
   }
+
+  /* Responsive */
+
+  .mdl-layout.is-small-screen .large-screen {
+    display: none;
+  }
+
+  .mdl-layout:not(.is-small-screen) .small-screen {
+    display: none;
+  }
 }
 
 /* Ribbon */
