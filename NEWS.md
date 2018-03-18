@@ -1,6 +1,4 @@
-[0.2.0]: https://github.com/ntrrg/NtDocutils/releases/tag/v0.2.0
-# News ([0.2.0][])
+[0.2.1]: https://github.com/ntrrg/NtDocutils/releases/tag/v0.2.1
+# News ([0.2.1][])
 
-* Upgraded Docutils to 0.14
-* The CLI option `--server` now receives `local` instead `file`
-* OS filtering (`.os`) was replaced by general filtering (`.fl`)
+* Responsive classes for MDL theme (`small-screen` and `large-screen`)

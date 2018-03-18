@@ -3,7 +3,7 @@
 
 """NtDocutils."""
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 __docformat__ = "reStructuredText"
 
 COPYRIGHT = """NtDocutils {} https://ntrrg.github.io/NtDocutils/

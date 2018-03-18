@@ -9,7 +9,7 @@
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: License
-    :target: https://github.com/ntrrg/NtDocutils/blob/v0.2.0/LICENSE
+    :target: https://github.com/ntrrg/NtDocutils/blob/v0.2.1/LICENSE
 
 __ https://getmdl.io/
 
@@ -44,22 +44,22 @@ From PyPI
 
 .. code:: sh
 
-    pip install NtDocutils==0.2.0
+    pip install NtDocutils==0.2.1
 
 From source
 -----------
 
 .. code:: sh
 
-    wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.0.tar.gz'
+    wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.1.tar.gz'
 
 .. code:: sh
 
-    tar -xvf NtDocutils-0.2.0.tar.gz
+    tar -xvf NtDocutils-0.2.1.tar.gz
 
 .. code:: sh
 
-    cd NtDocutils-0.2.0
+    cd NtDocutils-0.2.1
 
 .. code:: sh
 

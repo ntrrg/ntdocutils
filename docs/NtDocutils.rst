@@ -9,13 +9,13 @@ NtDocutils
 ==========
 
 -----
-0.2.0
+0.2.1
 -----
 
 :Author: Miguel Angel Rivera Notararigo
 :Contact: ntrrgx@gmail.com
-:Date: 2018-03-06 19:00:00 -04:00
-:License: `MIT <https://github.com/ntrrg/NtDocutils/blob/v0.2.0/LICENSE>`_
+:Date: 2018-03-17 21:00:00 -04:00
+:License: `MIT <https://github.com/ntrrg/NtDocutils/blob/v0.2.1/LICENSE>`_
 
 .. image:: images/ntdocutils.png
     :class: article-image
@@ -24,11 +24,13 @@ NtDocutils
 __ MDL_
 
 **NtDocutils** is a `Material Design Lite`__ theme for Docutils_ (maybe a
-little more :emoji:`😄`). This site was built with it, so you may see what you
-can do, but if you want to see all the styles, you should go to the `demo
+little more :emoji:`😄`). This site was built with it, so you may see what is
+possible to do, but if you want to see all the styles, checkout the `demo
 site`_.
 
 .. contents::
+
+|pb|
 
 Features
 ========
@@ -48,13 +50,15 @@ __ `Filtering`_
 
 __ Attachments_
 __ Printing_
+__ Responsiveness_
 
 .. |options-button| image:: images/options-button.png
     :class: inline
     :height: 3em
 
-* Attachments (see `this section`__), print friendly (see `this section`__)
-  and more from the |options-button| button.
+* Attachments (see `this section`__), print friendly (see `this section`__),
+  responsiveness (see `this section`__) and more from the |options-button|
+  button.
 
 __ `Theme customization`_
 
@@ -66,7 +70,7 @@ Install
 .. warning::
     :class: fl fl-debian
 
-    You will need superuser privileges if you don't use a virtualenv.
+    Superuser privileges will be needed if you don't use a virtualenv.
 
 **NtDocutils** requires:
 
@@ -80,12 +84,12 @@ From PyPI
 .. code:: sh
     :class: fl fl-debian
 
-    pip install NtDocutils==0.2.0
+    pip install NtDocutils==0.2.1
 
 .. code:: bat
     :class: fl fl-windows
 
-    pip install NtDocutils==0.2.0
+    pip install NtDocutils==0.2.1
 
 From source
 -----------
@@ -94,15 +98,15 @@ From source
 
     .. code:: sh
 
-        wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.0.tar.gz'
+        wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.1.tar.gz'
 
     .. code:: sh
 
-        tar -xvf NtDocutils-0.2.0.tar.gz
+        tar -xvf NtDocutils-0.2.1.tar.gz
 
     .. code:: sh
 
-        cd NtDocutils-0.2.0
+        cd NtDocutils-0.2.1
 
     .. code:: sh
 
@@ -111,16 +115,20 @@ From source
 .. class:: fl fl-windows
 
     Download an extract the file
-    https://github.com/ntrrg/NtDocutils/archive/v0.2.0.tar.gz, then run the
+    https://github.com/ntrrg/NtDocutils/archive/v0.2.1.tar.gz, then run the
     following commands:
 
     .. code:: bat
 
-        cd NtDocutils-0.2.0
+        cd NtDocutils-0.2.1
 
     .. code:: bat
 
         python3 setup.py
+
+.. class:: fl fl-windows
+
+|pb|
 
 Usage
 =====
@@ -130,8 +138,6 @@ Basically, you have to do two things:
 #. Create a ``.rst`` file:
 
    .. class:: fl fl-debian
-
-   |lb|
 
    ``example.rst``:
 
@@ -161,7 +167,7 @@ And that's it, you already have some like this:
 
 .. image:: images/example.png
     :class: media-print
-    :height: 33em
+    :height: 25em
     :align: center
 
 The following sections cover the usage of some utilities to improve your
@@ -209,7 +215,7 @@ Attachments
     :height: 3em
 
 You can set a list of useful files in the |attachments-button| button by
-adding the following lines in your article:
+adding the following lines in the article:
 
 .. code:: rest
     :number-lines:
@@ -220,7 +226,7 @@ adding the following lines in your article:
           ATTACHMENTS = [
             {
               url: 'NtDocutils.rst',
-              name: 'NtDocutils 0.2.0.rst',
+              name: 'NtDocutils 0.2.1.rst',
               icon: 'code'
             }
           ];
@@ -304,14 +310,35 @@ Display content for specific device:
 
     .. raw:: html
 
-        <object data="example.html" type="text/html" height="400px" width="100%"
-            class="media-screen">
+        <object data="example.html" type="text/html" height="400px"
+            width="100%" class="media-screen">
         </object>
 
     .. Paper
 
     .. image:: images/example.png
         :class: media-print
+
+Responsiveness
+--------------
+
+With responsiveness classes is easy to improve how the article is viewed in
+different sized screens, just use ``large-screen`` and ``small-screen`` when
+you want it work, try it, resize the window.
+
+.. code:: text
+    :class: large-screen
+
+    ##########################
+    # LARGE SCREEN DETECTED! #
+    ##########################
+
+.. code:: text
+    :class: small-screen
+
+    ##########################
+    # SMALL SCREEN DETECTED! #
+    ##########################
 
 Theme customization
 -------------------
@@ -351,7 +378,7 @@ by creating a file with the following template__:
 
 The recommended color for the ribbon background (line 4) is the primary color
 from the theme, you can get this value searching the property ``color`` at the
-rule ``.mdl-button.mdl-button--colored`` in the file you downloaded from MDL_
+rule ``.mdl-button.mdl-button--colored`` in the file downloaded from MDL_
 (``material.min.css``). The links (line 88) use the accent color from the
 theme, but in some cases this make them a little unreadable, so you could
 uncomment it and use the primary color. You should feel free editing the others
@@ -399,7 +426,7 @@ Uninstall
 .. warning::
     :class: fl fl-debian
 
-    You will need superuser privileges if you didn't use a virtualenv.
+    Superuser privileges will be needed if you didn't use a virtualenv.
 
 Should be enough with this:
 
@@ -413,14 +440,10 @@ Should be enough with this:
 
     pip uninstall NtDocutils
 
-.. class:: fl fl-windows
-
-|lb|
-
 Contributing
 ============
 
-__ https://github.com/ntrrg/NtDocutils/blob/v0.2.0/CONTRIBUTING.md
+__ https://github.com/ntrrg/NtDocutils/blob/v0.2.1/CONTRIBUTING.md
 
 See the `contribution guide`__ for more information.
 
@@ -463,7 +486,7 @@ Working on this project I use/used:
 
 .. _MDL: https://getmdl.io/
 .. _Docutils: http://docutils.sourceforge.net/
-.. _Demo site: demo.html
+.. _Demo site: https://ntrrg.github.io/NtDocutils/demo.html
 
 .. raw:: html
 
@@ -471,16 +494,16 @@ Working on this project I use/used:
       ATTACHMENTS = [
         {
           url: 'NtDocutils.rst',
-          name: 'NtDocutils 0.2.0.rst',
+          name: 'NtDocutils 0.2.1.rst',
           icon: 'code'
         },
         {
           url: 'attachments/ntdocutils_debian.pdf',
-          name: 'NtDocutils 0.2.0 (Debian).pdf'
+          name: 'NtDocutils 0.2.1 (Debian).pdf'
         },
         {
           url: 'attachments/ntdocutils_windows.pdf',
-          name: 'NtDocutils 0.2.0 (Windows).pdf'
+          name: 'NtDocutils 0.2.1 (Windows).pdf'
         }
       ];
     </script>
@@ -488,7 +511,3 @@ Working on this project I use/used:
 .. |pb| raw:: html
 
     <div class="media-print" style="page-break-after: always"></div>
-
-.. |lb| raw:: html
-
-    <br class="media-print"/>
