@@ -32,9 +32,9 @@ Subtitle
     Centro Empresarial Gran Mundo
     Piso 7, oficina 7-3
 
-:Version: 0.2.1
+:Version: 0.2.2
 :Date: 2018-03-17 21:20:00 -04:00
-:License: `MIT <https://github.com/ntrrg/NtDocutils/blob/v0.2.1/LICENSE>`_
+:License: `MIT <https://github.com/ntrrg/NtDocutils/blob/v0.2.2/LICENSE>`_
 
 .. image:: images/ntdocutils.png
     :class: article-image
@@ -556,12 +556,12 @@ Block syntax highlighting
       ATTACHMENTS = [
         {
           url: 'demo.rst',
-          name: 'NtDocutils 0.2.1 - Demo.rst',
+          name: 'NtDocutils 0.2.2 - Demo.rst',
           icon: 'code'
         },
         {
           url: 'attachments/demo.pdf',
-          name: 'NtDocutils 0.2.1 - Demo.pdf'
+          name: 'NtDocutils 0.2.2 - Demo.pdf'
         }
       ];
     </script>

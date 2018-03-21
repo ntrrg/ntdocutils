@@ -3,10 +3,10 @@
 
 """NtDocutils."""
 
-__version__ = "0.2.1"
+__version__ = "0.2.2"
 __docformat__ = "reStructuredText"
 
-COPYRIGHT = """NtDocutils {} https://ntrrg.github.io/NtDocutils/
+COPYRIGHT = """NtDocutils v{} https://ntrrg.github.io/NtDocutils/
 Copyright (c) 2017 Miguel Angel Rivera Notararigo
 Licensed under The MIT License""".format(__version__)
 

@@ -9,8 +9,13 @@ window.addEventListener('load', () => {
     window.ATTACHMENTS = []
   }
 
+  if (window.LANGS === undefined) {
+    window.LANGS = []
+  }
+
   removeMediaPrint()
   bFieldsToIcons()
+  setupBFields()
   setupFilters()
   setupArticleOptions()
   setupExternalLinks()
@@ -26,7 +31,9 @@ const ICONS = new Map([
   ['status', 'show_chart'],
   ['date', 'access_time'],
   ['copyright', 'copyright'],
-  ['license', 'copyright']
+  ['license', 'copyright'],
+  ['category', 'folder'],
+  ['tags', 'label']
 ])
 
 /**
@@ -320,6 +327,65 @@ function setupArticleOptions() {
 
   if (window.ATTACHMENTS.length === 0) {
     removeElement(options.querySelector('#attachments-button'))
+  }
+
+  // Languages
+
+  const langMenu = options.querySelector('#lang-menu')
+
+  for (const translation of window.LANGS) {
+    langMenu.appendChild(createElement('a', {
+      href: translation.url,
+      children: [
+        createElement('li', {
+          class: 'mdl-menu__item',
+          textContent: translation.name
+        })
+      ]
+    }))
+  }
+
+  if (window.LANGS.length === 0) {
+    removeElement(options.querySelector('#lang-button'))
+  }
+}
+
+/**
+ * Sets up bibliographic fields.
+ */
+function setupBFields() {
+  const categoryContainer = document.querySelector('.docinfo dd.category p')
+
+  if (categoryContainer) {
+    const category = categoryContainer.textContent
+    updateElement(categoryContainer, { textContent: '' })
+
+    updateElement(categoryContainer, { children: [
+      createElement('a', {
+        href: '#',
+        textContent: category
+      })
+    ] })
+  }
+
+  const tagsContainer = document.querySelector('.docinfo dd.tags p')
+
+  if (tagsContainer) {
+    const tags = tagsContainer.textContent
+      .replace(/ /g, '')
+      .split(';')
+
+    updateElement(tagsContainer, { textContent: '' })
+
+    for (const tag of tags.slice(0, tags.length - 1)) {
+      updateElement(tagsContainer, { children: [
+        createElement('a', {
+          class: 'tag',
+          href: '#',
+          textContent: tag + ';'
+        })
+      ] })
+    }
   }
 }
 
