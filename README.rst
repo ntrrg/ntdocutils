@@ -9,7 +9,7 @@
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: License
-    :target: https://github.com/ntrrg/NtDocutils/blob/v0.2.1/LICENSE
+    :target: https://github.com/ntrrg/NtDocutils/blob/v0.2.2/LICENSE
 
 __ https://getmdl.io/
 
@@ -26,7 +26,9 @@ Features
 * Filter content by OS, distributions, categories or any other filters you
   want.
 
-* Attachments, print friendly and more.
+* Attachments, print, translations linking and more.
+
+* Print friendly and responsiveness.
 
 * Theme customization.
 
@@ -44,22 +46,22 @@ From PyPI
 
 .. code:: sh
 
-    pip install NtDocutils==0.2.1
+    pip install NtDocutils==0.2.2
 
 From source
 -----------
 
 .. code:: sh
 
-    wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.1.tar.gz'
+    wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.2.tar.gz'
 
 .. code:: sh
 
-    tar -xvf NtDocutils-0.2.1.tar.gz
+    tar -xvf NtDocutils-0.2.2.tar.gz
 
 .. code:: sh
 
-    cd NtDocutils-0.2.1
+    cd NtDocutils-0.2.2
 
 .. code:: sh
 

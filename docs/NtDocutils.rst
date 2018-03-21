@@ -9,13 +9,13 @@ NtDocutils
 ==========
 
 -----
-0.2.1
+0.2.2
 -----
 
 :Author: Miguel Angel Rivera Notararigo
 :Contact: ntrrgx@gmail.com
-:Date: 2018-03-17 21:00:00 -04:00
-:License: `MIT <https://github.com/ntrrg/NtDocutils/blob/v0.2.1/LICENSE>`_
+:Date: 2018-03-21 03:18:00 -04:00
+:License: `MIT <https://github.com/ntrrg/NtDocutils/blob/v0.2.2/LICENSE>`_
 
 .. image:: images/ntdocutils.png
     :class: article-image
@@ -49,16 +49,20 @@ __ `Filtering`_
   want (see `this section`__).
 
 __ Attachments_
-__ Printing_
-__ Responsiveness_
+__ Translations_
 
 .. |options-button| image:: images/options-button.png
     :class: inline
     :height: 3em
 
-* Attachments (see `this section`__), print friendly (see `this section`__),
-  responsiveness (see `this section`__) and more from the |options-button|
-  button.
+* Attachments (see `this section`__), print, translations linking (see `this
+  section`__) and more from the |options-button| button.
+
+__ Printing_
+__ Responsiveness_
+
+* Print friendly (see `this section`__) and responsiveness (see `this
+  section`__).
 
 __ `Theme customization`_
 
@@ -84,12 +88,12 @@ From PyPI
 .. code:: sh
     :class: fl fl-debian
 
-    pip install NtDocutils==0.2.1
+    pip install NtDocutils==0.2.2
 
 .. code:: bat
     :class: fl fl-windows
 
-    pip install NtDocutils==0.2.1
+    pip install NtDocutils==0.2.2
 
 From source
 -----------
@@ -98,15 +102,15 @@ From source
 
     .. code:: sh
 
-        wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.1.tar.gz'
+        wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.2.tar.gz'
 
     .. code:: sh
 
-        tar -xvf NtDocutils-0.2.1.tar.gz
+        tar -xvf NtDocutils-0.2.2.tar.gz
 
     .. code:: sh
 
-        cd NtDocutils-0.2.1
+        cd NtDocutils-0.2.2
 
     .. code:: sh
 
@@ -115,12 +119,12 @@ From source
 .. class:: fl fl-windows
 
     Download an extract the file
-    https://github.com/ntrrg/NtDocutils/archive/v0.2.1.tar.gz, then run the
+    https://github.com/ntrrg/NtDocutils/archive/v0.2.2.tar.gz, then run the
     following commands:
 
     .. code:: bat
 
-        cd NtDocutils-0.2.1
+        cd NtDocutils-0.2.2
 
     .. code:: bat
 
@@ -226,7 +230,7 @@ adding the following lines in the article:
           ATTACHMENTS = [
             {
               url: 'NtDocutils.rst',
-              name: 'NtDocutils 0.2.1.rst',
+              name: 'NtDocutils 0.2.2.rst',
               icon: 'code'
             }
           ];
@@ -269,6 +273,62 @@ adding the following lines in the article:
                   "url": URL_N,
                   "name": DISPLAY_NAME_N,
                   "icon": ICON_NAME_N
+                }
+              ];
+            </script>
+
+Translations
+------------
+
+.. |lang-button| image:: images/lang-button.png
+    :class: inline
+    :height: 3em
+
+You can link article translations in the |lang-button| button by adding the
+following lines in the article:
+
+.. code:: rest
+    :number-lines:
+
+    .. raw:: html
+
+        <script>
+          LANGS = [
+            {
+              url: '/es',
+              name: 'Spanish (Español)'
+            }
+          ];
+        </script>
+
+.. admonition:: Syntax
+    :class: syntax
+
+    ``LANGS`` is a global array, it store the translations list showed in the
+    |lang-button| button, each translation must be defined as an object with
+    the following properties:
+
+    ``url`` (string)
+      URL to the translation page, could be an external link.
+
+    ``name`` (string)
+      Name displayed at the list.
+
+    .. code:: text
+        :number-lines:
+
+        .. raw:: html
+
+            <script>
+              LANGS = [
+                {
+                  "url": URL,
+                  "name": DISPLAY_NAME
+                },
+                ...
+                {
+                  "url": URL_N,
+                  "name": DISPLAY_NAME_N
                 }
               ];
             </script>
@@ -339,6 +399,22 @@ you want it work, try it, resize the window.
     ##########################
     # SMALL SCREEN DETECTED! #
     ##########################
+
+.. code:: rst
+
+    .. code:: text
+        :class: large-screen
+
+        ##########################
+        # LARGE SCREEN DETECTED! #
+        ##########################
+
+    .. code:: text
+        :class: small-screen
+
+        ##########################
+        # SMALL SCREEN DETECTED! #
+        ##########################
 
 Theme customization
 -------------------
@@ -443,9 +519,11 @@ Should be enough with this:
 Contributing
 ============
 
-__ https://github.com/ntrrg/NtDocutils/blob/v0.2.1/CONTRIBUTING.md
+__ https://github.com/ntrrg/NtDocutils/blob/v0.2.2/CONTRIBUTING.md
 
 See the `contribution guide`__ for more information.
+
+|pb|
 
 Acknowledgment
 ==============
@@ -494,16 +572,16 @@ Working on this project I use/used:
       ATTACHMENTS = [
         {
           url: 'NtDocutils.rst',
-          name: 'NtDocutils 0.2.1.rst',
+          name: 'NtDocutils 0.2.2.rst',
           icon: 'code'
         },
         {
           url: 'attachments/ntdocutils_debian.pdf',
-          name: 'NtDocutils 0.2.1 (Debian).pdf'
+          name: 'NtDocutils 0.2.2 (Debian).pdf'
         },
         {
           url: 'attachments/ntdocutils_windows.pdf',
-          name: 'NtDocutils 0.2.1 (Windows).pdf'
+          name: 'NtDocutils 0.2.2 (Windows).pdf'
         }
       ];
     </script>

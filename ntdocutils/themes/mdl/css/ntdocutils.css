@@ -159,6 +159,13 @@ dl.docinfo dd {
   margin-left: 2em;
 }
 
+dl.docinfo dd.category a,
+dl.docinfo dd.tags a.tag {
+  font-size: small;
+  margin-right: 0.5em;
+  text-transform: uppercase;
+}
+
 /* Titles */
 
 .mdl-layout.is-small-screen h1.title,

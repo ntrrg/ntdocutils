@@ -50,7 +50,7 @@ class ArgumentParser(argparse.ArgumentParser):
         self.add_argument(
             "-V", "--version",
             action="version",
-            version="NtDocutils {}".format(__version__)
+            version="NtDocutils v{}".format(__version__)
         )
 
         self.add_argument(
