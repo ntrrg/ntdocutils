@@ -152,7 +152,7 @@ Working on this project I use/used:
 
 * `XFCE <https://xfce.org/>`_
 
-* `Sublime <ext 3](https://www.sublimetext.com/3>`_
+* `Sublime Text 3 <https://www.sublimetext.com/3>`_
 
 * `Chrome <https://www.google.com/chrome/browser/desktop/index.html>`_
 
