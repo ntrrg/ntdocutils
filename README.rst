@@ -1,7 +1,7 @@
 .. raw:: html
 
     <p align="center">
-      <img alt="NtDocutils" width="240" src="docs/images/ntdocutils.png"/>
+      <img alt="NtDocutils" width="240" src="images/ntdocutils.png"/>
     </p>
 
 .. image:: https://img.shields.io/pypi/v/NtDocutils.svg
@@ -102,7 +102,7 @@ Basically, you have to do two things:
 
 And that's it, you already have some like this:
 
-.. image:: docs/images/example.png
+.. image:: images/example.png
 
 __ https://blog.nt.web.ve/en/articles/ntdocutils/#usage
 
