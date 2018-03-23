@@ -9,7 +9,7 @@
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: License
-    :target: https://github.com/ntrrg/NtDocutils/blob/v0.3.2/LICENSE
+    :target: https://github.com/ntrrg/NtDocutils/blob/v0.3.3/LICENSE
 
 __ https://getmdl.io/
 
@@ -19,14 +19,14 @@ __ https://getmdl.io/
 Features
 ========
 
-* All the features from Docutils_ for the ``rst2html5.py`` writer.
+* All the features from Docutils_ for the ``rst2html5.py`` front end.
 
 * Special roles for emojis and keyboard keys.
 
 * Filter content by OS, distributions, categories or any other filters you
   want.
 
-* Attachments, print button and more.
+* Attachments, print button, translations and versions linking and more.
 
 * Print friendly and responsiveness.
 
@@ -46,22 +46,22 @@ From PyPI
 
 .. code:: shell-session
 
-    # pip install NtDocutils==0.3.2
+    # pip install NtDocutils==0.3.3
 
 From source
 -----------
 
 .. code:: shell-session
 
-    $ wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.3.2.tar.gz'
+    $ wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.3.3.tar.gz'
 
 .. code:: shell-session
 
-    $ tar -xvf NtDocutils-0.3.2.tar.gz
+    $ tar -xvf NtDocutils-0.3.3.tar.gz
 
 .. code:: shell-session
 
-    $ cd NtDocutils-0.3.2
+    $ cd NtDocutils-0.3.3
 
 .. code:: shell-session
 
@@ -111,7 +111,7 @@ The official site shows a better explanation in `this section`__.
 Command line reference
 ----------------------
 
-All options from the ``rst2html5.py`` writer are available.
+All options from the ``rst2html5.py`` front end are available.
 
 .. code:: text
 

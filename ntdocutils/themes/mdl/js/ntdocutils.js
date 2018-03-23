@@ -346,7 +346,7 @@ function setupArticleOptions() {
       children: [
         createElement('li', {
           class: 'mdl-menu__item',
-          textContent: version.number
+          textContent: version.name
         })
       ]
     }))

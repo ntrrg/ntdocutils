@@ -39,7 +39,7 @@
 
 .mdl-layout.dark-theme,
 .mdl-layout.dark-theme img {
-  filter: invert();
+  filter: invert(100%);
 }
 
 /* Ribbon */
@@ -571,4 +571,8 @@ span.pre {
   padding: 0.1em 0.3em;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+pre.code code {
+  padding: 0em;
 }
