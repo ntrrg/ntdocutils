@@ -1,12 +1,12 @@
-# NtDocutils https://ntrrg.github.io/NtDocutils/
+# NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
 
 """NtDocutils."""
 
-__version__ = "0.2.2"
+__version__ = "0.3.0"
 __docformat__ = "reStructuredText"
 
-COPYRIGHT = """NtDocutils v{} https://ntrrg.github.io/NtDocutils/
+COPYRIGHT = """NtDocutils v{} https://blog.nt.web.ve/en/articles/ntdocutils/
 Copyright (c) 2017 Miguel Angel Rivera Notararigo
 Licensed under The MIT License""".format(__version__)
 

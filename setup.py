@@ -1,4 +1,4 @@
-# NtDocutils https://ntrrg.github.io/NtDocutils/
+# NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
 
 from setuptools import setup, find_packages
@@ -8,7 +8,7 @@ from ntdocutils import __version__, DESCRIPTION
 
 basedir = path.abspath(path.dirname(__file__))
 
-with open(path.join(basedir, "README.rst"), encoding="utf-8") as readme:
+with open(path.join(basedir, "README.rst")) as readme:
     long_description = readme.read()
 
 setup(
@@ -16,7 +16,7 @@ setup(
     version=__version__,
     description=DESCRIPTION,
     long_description=long_description,
-    url="https://ntrrg.github.io/NtDocutils/",
+    url="https://blog.nt.web.ve/en/articles/ntdocutils/",
     author="Miguel Angel Rivera Notararigo",
     author_email="ntrrgx@gmail.com",
     license="MIT",

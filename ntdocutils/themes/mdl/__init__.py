@@ -1,4 +1,4 @@
-# NtDocutils https://ntrrg.github.io/NtDocutils/
+# NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
 
 """MDL theme."""
@@ -19,7 +19,7 @@ class Writer(NtDocutilsWriter):
 
     def __init__(self, server):
         if not server:
-            server = "https://cdn.rawgit.com/ntrrg/NtDocutils/v0.2.2/" \
+            server = "https://cdn.rawgit.com/ntrrg/NtDocutils/v0.3.0/" \
                      "ntdocutils/themes/mdl"
 
         NtDocutilsWriter.__init__(self, server)
@@ -68,12 +68,11 @@ class Writer(NtDocutilsWriter):
             material_icons
         ).format(server=server)
 
-        assets["after_styles"] = (stylesheet * 6).format(
+        assets["after_styles"] = (stylesheet * 5).format(
             "{server}/css/minimal.css",
             "{server}/css/plain.css",
             "{server}/css/ntdocutils.min.css",
             "{server}/css/paraiso-light.min.css",
-            "{server}/css/paraiso-dark.min.css",
             "{server}/css/print.min.css"
         ).format(server=server)
 

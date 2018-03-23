@@ -9,12 +9,12 @@
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: License
-    :target: https://github.com/ntrrg/NtDocutils/blob/v0.2.2/LICENSE
+    :target: https://github.com/ntrrg/NtDocutils/blob/v0.3.0/LICENSE
 
 __ https://getmdl.io/
 
 **NtDocutils** is a `Material Design Lite`__ theme for Docutils_. See the
-`official site <https://ntrrg.github.io/NtDocutils/>`_ for more info.
+`official site <https://blog.nt.web.ve/en/articles/ntdocutils/>`_ for more info.
 
 Features
 ========
@@ -26,7 +26,7 @@ Features
 * Filter content by OS, distributions, categories or any other filters you
   want.
 
-* Attachments, print, translations linking and more.
+* Attachments, print button and more.
 
 * Print friendly and responsiveness.
 
@@ -46,22 +46,22 @@ From PyPI
 
 .. code:: sh
 
-    pip install NtDocutils==0.2.2
+    pip install NtDocutils==0.3.0
 
 From source
 -----------
 
 .. code:: sh
 
-    wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.2.2.tar.gz'
+    wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.3.0.tar.gz'
 
 .. code:: sh
 
-    tar -xvf NtDocutils-0.2.2.tar.gz
+    tar -xvf NtDocutils-0.3.0.tar.gz
 
 .. code:: sh
 
-    cd NtDocutils-0.2.2
+    cd NtDocutils-0.3.0
 
 .. code:: sh
 
@@ -104,7 +104,7 @@ And that's it, you already have some like this:
 
 .. image:: docs/images/example.png
 
-__ https://ntrrg.github.io/NtDocutils/#usage
+__ https://blog.nt.web.ve/en/articles/ntdocutils/#usage
 
 The official site shows a better explanation in `this section`__.
 
