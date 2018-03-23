@@ -335,6 +335,13 @@ div.figure.align-right * {
   margin-right: 0em;
 }
 
+/* Lists */
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
 /* Definition lists */
 
 dl.option-list {
