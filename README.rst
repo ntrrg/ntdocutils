@@ -44,28 +44,28 @@ Install
 From PyPI
 ---------
 
-.. code:: sh
+.. code:: shell-session
 
-    pip install NtDocutils==0.3.0
+    # pip install NtDocutils==0.3.0
 
 From source
 -----------
 
-.. code:: sh
+.. code:: shell-session
 
-    wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.3.0.tar.gz'
+    $ wget -c 'https://github.com/ntrrg/NtDocutils/archive/v0.3.0.tar.gz'
 
-.. code:: sh
+.. code:: shell-session
 
-    tar -xvf NtDocutils-0.3.0.tar.gz
+    $ tar -xvf NtDocutils-0.3.0.tar.gz
 
-.. code:: sh
+.. code:: shell-session
 
-    cd NtDocutils-0.3.0
+    $ cd NtDocutils-0.3.0
 
-.. code:: sh
+.. code:: shell-session
 
-    python3 setup.py
+    # python3 setup.py
 
 Usage
 =====
@@ -96,9 +96,9 @@ Basically, you have to do two things:
 
 #. Process your file:
 
-   .. code:: sh
+   .. code:: shell-session
 
-       ntdocutils example.rst example.html
+       $ ntdocutils example.rst example.html
 
 And that's it, you already have some like this:
 
@@ -134,9 +134,9 @@ Uninstall
 
 Should be enough with this:
 
-.. code:: sh
+.. code:: shell-session
 
-    pip uninstall -y NtDocutils docutils Pygments
+    # pip uninstall -y NtDocutils docutils Pygments
 
 Contributing
 ============
