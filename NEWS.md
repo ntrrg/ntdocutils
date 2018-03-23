@@ -1,4 +1,6 @@
-[0.2.2]: https://github.com/ntrrg/NtDocutils/releases/tag/v0.2.2
-# News ([0.2.2][])
+[0.3.0]: https://github.com/ntrrg/NtDocutils/releases/tag/v0.3.0
+# News ([0.3.0][])
 
-* Translations linking
+* Version linking
+* Theme button now affects all the site
+* Documentation migrated to https://blog.nt.web.ve/en/articles/ntdocutils/

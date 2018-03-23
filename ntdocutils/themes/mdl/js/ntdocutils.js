@@ -1,18 +1,10 @@
-// NtDocutils https://ntrrg.github.io/NtDocutils/
+// NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/
 // Copyright 2017 Miguel Angel Rivera Notararigo
 // This file follows the Standart Style Guide (https://standardjs.com/)
 
 'use strict'
 
 window.addEventListener('load', () => {
-  if (window.ATTACHMENTS === undefined) {
-    window.ATTACHMENTS = []
-  }
-
-  if (window.LANGS === undefined) {
-    window.LANGS = []
-  }
-
   removeMediaPrint()
   bFieldsToIcons()
   setupBFields()
@@ -25,9 +17,9 @@ const ICONS = new Map([
   ['author', 'person'],
   ['authors', 'people'],
   ['organization', 'group_work'],
-  ['contact', 'email'],
+  ['contact', 'contacts'],
   ['address', 'place'],
-  ['version', 'code'],
+  ['version', 'history'],
   ['status', 'show_chart'],
   ['date', 'access_time'],
   ['copyright', 'copyright'],
@@ -240,7 +232,6 @@ function setupArticleOptions() {
 
   updateElement(mainButton, { events: { click: () => {
     const buttons = options.querySelectorAll('button:not(#options-button)')
-
     let icon
 
     if (!hasClass(mainButton, 'open')) {
@@ -269,33 +260,26 @@ function setupArticleOptions() {
 
   // Theme button
 
-  const themeButton = createElement('button', {
-    id: 'theme-button',
-    class: 'mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect ' +
-           'mdl-button--accent',
-    children: [
-      createElement('i', {
-        class: 'material-icons',
-        textContent: 'invert_colors'
-      })
-    ],
-    events: {
-      click: () => {
-        const container = document.querySelector('.mdl-layout')
+  const invertButton = options.querySelector('#invert-button')
 
-        if (hasClass(container, 'theme-light')) {
-          snackbar('Dark theme is enabled')
-        } else {
-          snackbar('Light theme is enabled')
-        }
+  updateElement(invertButton, { events: { click: () => {
+    const container = document.querySelector('.mdl-layout')
+    let icon
 
-        toggleClass(container, 'theme-light theme-dark')
-      }
+    if (hasClass(container, 'dark-theme')) {
+      icon = 'invert_colors'
+      snackbar('Light theme is enabled')
+    } else {
+      icon = 'invert_colors_off'
+      snackbar('Dark theme is enabled')
     }
-  })
 
-  options.appendChild(themeButton)
-  window.componentHandler.upgradeElement(themeButton)
+    toggleClass(container, 'dark-theme')
+    updateElement(
+      invertButton.querySelector('i.material-icons'),
+      { textContent: icon }
+    )
+  } } })
 
   // Print button
 
@@ -305,6 +289,7 @@ function setupArticleOptions() {
   // Attachments
 
   const attachmentsMenu = options.querySelector('#attachments-menu')
+  window.ATTACHMENTS = window.ATTACHMENTS || []
 
   for (const file of window.ATTACHMENTS) {
     attachmentsMenu.appendChild(createElement('a', {
@@ -332,6 +317,7 @@ function setupArticleOptions() {
   // Languages
 
   const langMenu = options.querySelector('#lang-menu')
+  window.LANGS = window.LANGS || []
 
   for (const translation of window.LANGS) {
     langMenu.appendChild(createElement('a', {
@@ -347,6 +333,27 @@ function setupArticleOptions() {
 
   if (window.LANGS.length === 0) {
     removeElement(options.querySelector('#lang-button'))
+  }
+
+  // Versions
+
+  const versionsMenu = options.querySelector('#versions-menu')
+  window.VERSIONS = window.VERSIONS || []
+
+  for (const version of window.VERSIONS) {
+    versionsMenu.appendChild(createElement('a', {
+      href: version.url,
+      children: [
+        createElement('li', {
+          class: 'mdl-menu__item',
+          textContent: version.number
+        })
+      ]
+    }))
+  }
+
+  if (window.VERSIONS.length === 0) {
+    removeElement(options.querySelector('#versions-button'))
   }
 }
 

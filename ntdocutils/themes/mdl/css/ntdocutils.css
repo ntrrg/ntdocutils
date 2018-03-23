@@ -1,4 +1,4 @@
-/* NtDocutils https://ntrrg.github.io/NtDocutils/ */
+/* NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/ */
 /* Copyright 2017 Miguel Angel Rivera Notararigo */
 /* This stylesheet extends ``minimal.css`` and ``plain.css`` by Günter Milde. */
 
@@ -33,6 +33,13 @@
   .mdl-layout:not(.is-small-screen) .small-screen {
     display: none;
   }
+}
+
+/* Dark theme */
+
+.mdl-layout.dark-theme,
+.mdl-layout.dark-theme img {
+  filter: invert();
 }
 
 /* Ribbon */
@@ -549,8 +556,12 @@ pre.code {
 }
 
 code,
-pre.literal-block,
+pre.code,
+.literal,
+.literal-block,
 span.pre {
+  border-radius: 0.3em;
+  padding: 0.1em 0.3em;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
