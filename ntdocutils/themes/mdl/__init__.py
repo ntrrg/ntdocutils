@@ -19,7 +19,7 @@ class Writer(NtDocutilsWriter):
 
     def __init__(self, server):
         if not server:
-            server = "https://cdn.rawgit.com/ntrrg/NtDocutils/v0.3.1/" \
+            server = "https://cdn.rawgit.com/ntrrg/NtDocutils/v0.3.2/" \
                      "ntdocutils/themes/mdl"
 
         NtDocutilsWriter.__init__(self, server)
