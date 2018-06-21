@@ -85,6 +85,10 @@ And this is the result:
 
 ![MDL Theme](screenshots/mdl-example.png)
 
+## Themes
+
+* [MDL](https://ntrrg.github.io/ntdocutils-theme-mdl)
+
 ## Uninstall
 
 Should be enough with this:
