@@ -1,4 +1,4 @@
-# NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/
+# NtDocutils https://nt.web.ve/en/projects/ntdocutils
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
 
 from setuptools import setup, find_packages
@@ -8,7 +8,7 @@ from ntdocutils import __version__, DESCRIPTION
 
 basedir = path.abspath(path.dirname(__file__))
 
-with open(path.join(basedir, "README.rst")) as readme:
+with open(path.join(basedir, "README.md")) as readme:
     long_description = readme.read()
 
 setup(
@@ -16,7 +16,7 @@ setup(
     version=__version__,
     description=DESCRIPTION,
     long_description=long_description,
-    url="https://blog.nt.web.ve/en/articles/ntdocutils/",
+    url="https://nt.web.ve/en/projects/ntdocutils",
     author="Miguel Angel Rivera Notararigo",
     author_email="ntrrgx@gmail.com",
     license="MIT",
@@ -39,7 +39,7 @@ setup(
         "Programming Language :: Python :: 3.6"
     ],
 
-    keywords="docutils restructuredtext docutils-theme documentation",
+    keywords="docutils restructuredtext docutils-theme-manager docutils-themes documentation",
     packages=find_packages(),
     install_requires=["docutils==0.14", "Pygments==2.2.0"],
     include_package_data=True,

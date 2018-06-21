@@ -1,4 +1,4 @@
-# NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/
+# NtDocutils https://nt.web.ve/en/projects/ntdocutils
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
 
 """
@@ -17,6 +17,7 @@ from os import listdir, path
 
 from ntdocutils import __version__, COPYRIGHT, DESCRIPTION
 from ntdocutils import __file__ as package
+from ntdocutils.writer import Writer as NtDocutilsWriter
 
 
 class ArgumentParser(argparse.ArgumentParser):
@@ -55,8 +56,6 @@ class ArgumentParser(argparse.ArgumentParser):
 
         self.add_argument(
             "-T", "--theme",
-            default="mdl",
-            choices=self.get_themes(),
             help="theme used to generate DESTINATION."
         )
 
@@ -69,22 +68,17 @@ class ArgumentParser(argparse.ArgumentParser):
                  " in there."
         )
 
-    def get_themes(self):
-        """Generates a themes list."""
-
-        basedir = path.dirname(path.abspath(package))
-        themes = listdir(path.join(basedir, "themes"))
-
-        return [theme for theme in themes if not theme.startswith("_")]
-
 
 def main():
     """Command line launcher."""
     parser = ArgumentParser()
     args, docutils_args = parser.parse_known_args()
 
-    # Get theme writer
-    theme = import_module("ntdocutils.themes." + args.theme)
-    writer = theme.Writer(server=args.server)
+    if args.theme:
+      # Get theme writer
+      theme = import_module("ntdocutils-theme-" + args.theme)
+      writer = theme.Writer(server=args.server)
+    else:
+      writer = NtDocutilsWriter()
 
     writer.write(args.source, args.destination, docutils_args)

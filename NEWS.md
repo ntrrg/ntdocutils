@@ -1,5 +1,7 @@
-[0.3.3]: https://github.com/ntrrg/NtDocutils/releases/tag/v0.3.3
-# News ([0.3.3][])
+[1.0.0]: https://github.com/ntrrg/ntdocutils/releases/tag/v1.0.0
+# News ([1.0.0][])
 
-* Fix some styles issues
-* Now versions use `name` instead `number`
+### Changed
+
+* Themes are now outside the project
+

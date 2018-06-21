@@ -1,4 +1,4 @@
-# NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/
+# NtDocutils https://nt.web.ve/en/projects/ntdocutils
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
 
 """
@@ -28,7 +28,6 @@ class Writer:
     """Creates a basic structure for themes writers."""
 
     docutils_argv = {
-        "report": "info",
         "strip-comments": True,
         "pep-references": True,
         "rfc-references": True,
@@ -46,8 +45,7 @@ class Writer:
           Server from where assets will be downloaded.
         """
 
-        if server:
-            self.server = server
+        self.server = server
 
     def assets(self):
         """

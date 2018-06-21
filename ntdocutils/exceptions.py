@@ -1,4 +1,4 @@
-# NtDocutils https://blog.nt.web.ve/en/articles/ntdocutils/
+# NtDocutils https://nt.web.ve/en/projects/ntdocutils
 # Copyright (c) 2017 Miguel Angel Rivera Notararigo
 
 """

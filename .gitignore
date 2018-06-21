@@ -1,5 +1,11 @@
 *.sublime*
+*.swp
+Session.vim
+nogit-*
+*.sublime*
 __pycache__
 *.egg-info
 /build/
 /dist/
+.DS_Store
+
