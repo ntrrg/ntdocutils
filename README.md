@@ -39,7 +39,7 @@ $ cd ntdocutils-1.0.0
 
 Basically, you have to do two things:
 
-1. Create a `.rst` file:
+1\. Create a `.rst` file:
 
 `example.rst`:
 
@@ -60,7 +60,7 @@ sint occaecat cupidatat non proident, sunt in culpa qui officia
 deserunt mollit anim id est laborum.
 ```
 
-2. Process your file:
+2\. Process your file:
 
 ```shell-session
 $ ntdocutils example.rst example.html
@@ -68,7 +68,9 @@ $ ntdocutils example.rst example.html
 
 And that's it, you already have a HTML file, just like Docutils.
 
-![Default Theme](screenshots/example.png)
+<p align="center">
+  <imp alt="Default Theme" src="screenshots/example.png"/>
+</p>
 
 To use a theme, just install it and pass the `-T THEME` flag, for example, to
 use the [MDL](https://getmdl.io) theme.
@@ -83,7 +85,9 @@ $ ntdocutils -T mdl example.rst example.html
 
 And this is the result:
 
-![MDL Theme](screenshots/mdl-example.png)
+<p align="center">
+  <imp alt="MDL Theme" src="screenshots/mdl-example.png"/>
+</p>
 
 ## Uninstall
 
