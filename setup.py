@@ -16,6 +16,7 @@ setup(
     version=__version__,
     description=DESCRIPTION,
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://nt.web.ve/en/projects/ntdocutils",
     author="Miguel Angel Rivera Notararigo",
     author_email="ntrrgx@gmail.com",
