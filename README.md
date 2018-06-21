@@ -68,9 +68,7 @@ $ ntdocutils example.rst example.html
 
 And that's it, you already have a HTML file, just like Docutils.
 
-<p align="center">
-  <imp alt="Default Theme" src="screenshots/example.png"/>
-</p>
+![Default Theme](screenshots/example.png)
 
 To use a theme, just install it and pass the `-T THEME` flag, for example, to
 use the [MDL](https://getmdl.io) theme.
@@ -85,9 +83,7 @@ $ ntdocutils -T mdl example.rst example.html
 
 And this is the result:
 
-<p align="center">
-  <imp alt="MDL Theme" src="screenshots/mdl-example.png"/>
-</p>
+![MDL Theme](screenshots/mdl-example.png)
 
 ## Uninstall
 
