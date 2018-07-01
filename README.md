@@ -87,6 +87,8 @@ And this is the result:
 
 ## Themes
 
+[Create your own theme](https://github.com/ntrrg/ntdocutils-theme-template).
+
 * [MDL](https://ntrrg.github.io/ntdocutils-theme-mdl)
 
 ## Uninstall
