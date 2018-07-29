@@ -1,6 +1,46 @@
 [![pypi](https://img.shields.io/pypi/v/NtDocutils.svg)](https://pypi.python.org/pypi/NtDocutils)
 
+# Install
+
+**NtDocutils** requires:
+
+* Python >= 3.4 
+* Docutils == 0.14 (auto installed)
+* Pygments == 2.2.0 (auto installed)
+
+## From PyPI
+
+```shell-session
+$ pip install NtDocutils
+```
+
+## From source
+
+```shell-session
+$ wget https://github.com/ntrrg/ntdocutils/archive/v1.0.0.tar.gz
+```
+
+```shell-session
+$ tar -xvf v1.0.0.tar.gz
+```
+
+```shell-session
+$ cd ntdocutils-1.0.0
+```
+
+```shell-session
+$ python3 setup.py
+```
+
+# Usage
+
 See <https://nt.web.ve/en/projects/ntdocutils>.
+
+# Uninstall
+
+```shell-session
+$ pip uninstall -y NtDocutils docutils Pygments
+```
 
 ## Contributing
 
