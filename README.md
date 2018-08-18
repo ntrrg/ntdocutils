@@ -1,8 +1,12 @@
 [![pypi](https://img.shields.io/pypi/v/NtDocutils.svg)](https://pypi.python.org/pypi/NtDocutils)
 
+**NtDocutils** is a theme manager for Docutils. It acts as a wrapper for the
+`rst2html5.py` frontend, and that enables the customization possibility of the
+resulting file.
+
 # Install
 
-**NtDocutils** requires:
+NtDocutils requires:
 
 * Python >= 3.4 
 * Docutils == 0.14 (auto installed)
