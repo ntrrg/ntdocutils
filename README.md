@@ -34,6 +34,10 @@ $ python3 setup.py
 
 # Usage
 
+```shell-session
+$ ntdocutils --help
+```
+
 See <https://nt.web.ve/en/projects/ntdocutils>.
 
 # Uninstall
