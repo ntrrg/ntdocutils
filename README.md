@@ -4,13 +4,13 @@
 `rst2html5.py` frontend, and that enables the customization possibility of the
 resulting file.
 
+See <https://nt.web.ve/en/projects/ntdocutils>.
+
 # Install
 
-NtDocutils requires:
+**Requirements**:
 
 * Python >= 3.4 
-* Docutils == 0.14 (auto installed)
-* Pygments == 2.2.0 (auto installed)
 
 ## From PyPI
 
@@ -41,8 +41,6 @@ $ python3 setup.py
 ```shell-session
 $ ntdocutils --help
 ```
-
-See <https://nt.web.ve/en/projects/ntdocutils>.
 
 # Uninstall
 
