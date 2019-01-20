@@ -1,52 +1,6 @@
 [![pypi](https://img.shields.io/pypi/v/NtDocutils.svg)](https://pypi.python.org/pypi/NtDocutils)
 
-**NtDocutils** is a theme manager for Docutils. It acts as a wrapper for the
-`rst2html5.py` frontend, and that enables the customization possibility of the
-resulting file.
-
-See <https://nt.web.ve/en/projects/ntdocutils>.
-
-# Install
-
-**Requirements**:
-
-* Python >= 3.4 
-
-## From PyPI
-
-```shell-session
-$ pip install NtDocutils
-```
-
-## From source
-
-```shell-session
-$ wget https://github.com/ntrrg/ntdocutils/archive/v1.0.0.tar.gz
-```
-
-```shell-session
-$ tar -xvf v1.0.0.tar.gz
-```
-
-```shell-session
-$ cd ntdocutils-1.0.0
-```
-
-```shell-session
-$ python3 setup.py
-```
-
-# Usage
-
-```shell-session
-$ ntdocutils --help
-```
-
-# Uninstall
-
-```shell-session
-$ pip uninstall -y NtDocutils docutils Pygments
-```
+**NtDocutils** is a theme manager for Docutils. See <https://nt.web.ve/en/projects/ntdocutils>.
 
 ## Contributing
 
