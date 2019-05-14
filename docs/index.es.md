@@ -4,8 +4,6 @@
 Su función es ser un mediador para el frontend `rst2html5.py`, y con esto
 habilitar la posibilidad de personalizar el archivo obtenido.
 
-{{< toc >}}
-
 # Instalación
 
 **Requisitos:**
@@ -69,7 +67,8 @@ $ ntdocutils example.rst example.html
 
 Y eso es todo, ya debería tener su archivo HTML con el estilo predeterminado.
 
-{{< img src="https://ntrrg.github.io/ntdocutils/example.png" alt="Default Theme" class="block" >}}
+<img class="block lazy-load" alt="Tema predeterminado"
+     data-src="https://ntrrg.github.io/ntdocutils/images/example.png"/>
 
 Para usar un tema, solo debe instalarse y pasarse la opción `-T TEMA`, por
 ejemplo, para usar el [tema MDL](https://ntrrg.github.io/ntdocutils-theme-mdl):
@@ -84,7 +83,8 @@ $ ntdocutils -T mdl example.rst example.html
 
 Y el resultado es:
 
-{{< img src="https://ntrrg.github.io/ntdocutils/mdl-example.png" alt="MDL Theme" class="block" >}}
+<img class="block lazy-load" alt="Tema MDL"
+     data-src="https://ntrrg.github.io/ntdocutils/images/mdl-example.png"/>
 
 ## CLI
 

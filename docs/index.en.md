@@ -4,8 +4,6 @@
 It acts as a wrapper for the `rst2html5.py` frontend, and that enables the
 customization possibility of the resulting file.
 
-{{< toc >}}
-
 # Install
 
 **Requirements:**
@@ -69,7 +67,8 @@ $ ntdocutils example.rst example.html
 
 And that's it, you already have a HTML file, just like Docutils.
 
-{{< img src="https://ntrrg.github.io/ntdocutils/example.png" alt="Default Theme" class="block" >}}
+<img class="block lazy-load" alt="Default Theme"
+     data-src="https://ntrrg.github.io/ntdocutils/images/example.png"/>
 
 To use a theme, just install it and pass the `-T THEME` flag, for example, to
 use the [MDL theme](https://ntrrg.github.io/ntdocutils-theme-mdl):
@@ -84,7 +83,8 @@ $ ntdocutils -T mdl example.rst example.html
 
 And this is the result:
 
-{{< img src="https://ntrrg.github.io/ntdocutils/mdl-example.png" alt="MDL Theme" class="block" >}}
+<img class="block lazy-load" alt="MDL Theme"
+     data-src="https://ntrrg.github.io/ntdocutils/images/mdl-example.png"/>
 
 ## CLI
 
