@@ -1,22 +1,40 @@
+---
+title: ntDocutils
+description: Gestor de temas para Docutils.
+metadata:
+  source-code: https://github.com/ntrrg/ntdocutils
+  license: MIT
+kinds:
+  - cli
+  - documentación
+techs:
+  - python
+  - docutils
+  - pygments
+  - mdl
+---
+
 [![pypi](https://img.shields.io/pypi/v/NtDocutils.svg)](https://pypi.python.org/pypi/NtDocutils)
 
-**ntDocutils** is a theme manager for [Docutils](http://docutils.sourceforge.net/).
-It acts as a wrapper for the `rst2html5.py` frontend, and that enables the
-customization possibility of the resulting file.
+**ntDocutils** es un gestor de temas para [Docutils](http://docutils.sourceforge.net/).
+Su función es ser un mediador para el frontend `rst2html5.py`, y con esto
+habilitar la posibilidad de personalizar el archivo obtenido.
 
-# Install
+{{< toc >}}
 
-**Requirements:**
+# Instalación
+
+**Requisitos:**
 
 * Python >= 3.4 
 
-## From PyPI
+## Desde el PyPI
 
 ```shell-session
 $ pip install NtDocutils
 ```
 
-## From source
+## Desde el código fuente
 
 ```shell-session
 $ wget https://github.com/ntrrg/ntdocutils/archive/v1.0.0.tar.gz
@@ -34,11 +52,11 @@ $ cd ntdocutils-1.0.0
 $ python3 setup.py
 ```
 
-# Usage
+# Uso
 
-Basically, you have to do two things:
+Básicamente de deben hacer dos cosas:
 
-1\. Create a `.rst` file:
+1\. Crear un archivo `.rst`:
 
 `example.rst`:
 
@@ -59,19 +77,18 @@ sint occaecat cupidatat non proident, sunt in culpa qui officia
 deserunt mollit anim id est laborum.
 ```
 
-2\. Process your file:
+2\. Procesar el archivo:
 
 ```shell-session
 $ ntdocutils example.rst example.html
 ```
 
-And that's it, you already have a HTML file, just like Docutils.
+Y eso es todo, ya debería tener su archivo HTML con el estilo predeterminado.
 
-<img class="block lazy-load" alt="Default Theme"
-     data-src="https://ntrrg.github.io/ntdocutils/images/example.png"/>
+{{< img src="images/example.png" alt="Default Theme" class="block" >}}
 
-To use a theme, just install it and pass the `-T THEME` flag, for example, to
-use the [MDL theme](https://ntrrg.github.io/ntdocutils-theme-mdl):
+Para usar un tema, solo debe instalarse y pasarse la opción `-T TEMA`, por
+ejemplo, para usar el [tema MDL](https://ntrrg.github.io/ntdocutils-theme-mdl):
 
 ```shell-session
 $ pip install ntdocutils-theme-mdl
@@ -81,10 +98,9 @@ $ pip install ntdocutils-theme-mdl
 $ ntdocutils -T mdl example.rst example.html
 ```
 
-And this is the result:
+Y el resultado es:
 
-<img class="block lazy-load" alt="MDL Theme"
-     data-src="https://ntrrg.github.io/ntdocutils/images/mdl-example.png"/>
+{{< img src="images/mdl-example.png" alt="MDL Theme" class="block" >}}
 
 ## CLI
 
@@ -115,25 +131,42 @@ Copyright (c) 2017 Miguel Angel Rivera Notararigo
 Licensed under The MIT License
 ```
 
-# Themes
+NtDocutils recibe dos argumentos, `SOURCE` y `DESTINATION`, que son el archivo
+reStructuredText y el archivo donde se escribirá resultado (HTML)
+respectivamente; además puede recibir cuatro opciones:
+
+* `-h`, `--help`: muestra el texto de ayuda de arriba y finaliza la ejecución.
+
+* `-V`, `--version`: muestra la versión de NtDocutils y finaliza la ejecución.
+
+* `-T TEMA`, `--theme TEMA`: determina el tema que será usado para procesar el
+  archivo `SOURCE`; si no se especifica algún tema, se usará el estilo
+  predeterminado de Docutils.
+
+* `-S SERVIDOR`, `--server SERVIDOR`: servidor de donde se descargarán los
+  archivos estáticos del tema (CSS, JavaScript, etc...); en caso de que se use
+  el valor `local`, NtDocutils creará una carpeta justo al lado del archivo
+  `DESTINATION` que contendrá todos archivos necesitados por el tema.
+
+# Temas
 
 * [MDL](https://ntrrg.github.io/ntdocutils-theme-mdl)
 
-## Create a theme
+## Crear un tema
 
-1\. Get the template.
+1\. Obtener la plantilla.
 
 ```shell-session
 $ git clone \
   --depth 1 \
 https://github.com/ntrrg/ntdocutils-theme-template.git \
-REPOSITORY_NAME
+NOMBRE_REPOSITORIO
 ```
 
-2\. Set up the template.
+2\. Configurar la plantilla.
 
 ```shell-session
-$ cd REPOSITORY_NAME
+$ cd NOMBRE_REPOSITORIO
 ```
 
 ```shell-session
@@ -156,8 +189,8 @@ SERVER="https://ntrrg.github.io/ntdocutils-theme-test/ntdocutils-theme-test"
 $ ./setup.sh
 ```
 
-3\. Edit  and test the template (see the [MDL theme](https://github.com/ntrrg/ntdocutils-theme-mdl/)
-code and use it as example).
+3\. Editar y probar la plantilla (vea el código fuente del [tema MDL](https://github.com/ntrrg/ntdocutils-theme-mdl/)
+y úselo como ejemplo).
 
 ```shell-session
 $ pip install -e .
@@ -168,15 +201,15 @@ $ cd docs
 ```
 
 ```shell-session
-$ ntdocutils -T THEME_NAME -S local demo.rst index.html
+$ ntdocutils -T TEMA -S local demo.rst index.html
 ```
 
-4\. Publish the theme.
+4\. Publicar el tema.
 
-**Note:** a Python account is needed ([create an account](https://pypi.org/account/register/)).
+**Nota:** Es necesario tener una cuenta Python ([crear una cuenta](https://pypi.org/account/register/)).
 
 ```shell-session
-$ rm -rf ntdocutils-theme-THEME_NAME
+$ rm -rf ntdocutils-theme-TEMA
 ```
 
 ```shell-session
@@ -199,64 +232,9 @@ $ python setup.py sdist bdist_well
 $ twine upload dist/*
 ```
 
-# Uninstall
+# Desinstalar
 
 ```shell-session
 $ pip uninstall -y NtDocutils docutils Pygments
 ```
-
-## Contributing
-
-See the [contribution guide](https://github.com/ntrrg/ntdocutils/blob/master/CONTRIBUTING.md)
-for more information.
-
-## Acknowledgment
-
-Working on this project I use/used:
-
-* [Debian](https://www.debian.org/)
-
-* [XFCE](https://xfce.org/)
-
-* [Sublime Text 3](https://www.sublimetext.com/3)
-
-* [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
-
-* [Terminator](https://gnometerminator.blogspot.com/p/introduction.html)
-
-* [Zsh](http://www.zsh.org/)
-
-* [Git](https://git-scm.com/)
-
-* [EditorConfig](http://editorconfig.org/)
-
-* [Github](https://github.com)
-
-* [Inkscape](https://inkscape.org/en/)
-
-* [GIMP](https://www.gimp.org/)
-
-* [Material Icons](https://material.io/icons/)
-
-* [Roboto](https://fonts.google.com/specimen/Roboto)
-
-* [RawGit](https://rawgit.com/)
-
-* [st](https://st.suckless.org/)
-
-* [GNU Screen](https://www.gnu.org/software/screen)
-
-* [Vim](https://www.vim.org/)
-
-* [Gogs](https://gogs.io/)
-
-* [Python](https://www.python.org)
-
-* [Docutils](http://docutils.sourceforge.net/)
-
-* [Pygments](http://pygments.org)
-
-**Docutils Team.** *reStructuredText.* <http://docutils.sourceforge.net/rst.html>
-
-**Mozilla Developer Network.** *JavaScript.* <https://developer.mozilla.org/en-US/docs/Web/JavaScript>
 
