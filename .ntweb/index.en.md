@@ -1,13 +1,9 @@
 ---
 title: ntDocutils
 description: Docutils theme manager.
-metadata:
-  source-code: https://github.com/ntrrg/ntdocutils
-  license: MIT
-kinds:
+tags:
   - cli
   - documentation
-techs:
   - python
   - docutils
   - pygments

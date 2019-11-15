@@ -1,13 +1,9 @@
 ---
 title: ntDocutils
 description: Gestor de temas para Docutils.
-metadata:
-  source-code: https://github.com/ntrrg/ntdocutils
-  license: MIT
-kinds:
+tags:
   - cli
   - documentación
-techs:
   - python
   - docutils
   - pygments
