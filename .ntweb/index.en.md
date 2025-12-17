@@ -10,7 +10,7 @@ tags:
   - mdl
 ---
 
-[![pypi](https://img.shields.io/pypi/v/NtDocutils.svg)](https://pypi.python.org/pypi/NtDocutils)
+[![pypi](https://img.shields.io/pypi/v/ntDocutils.svg)](https://pypi.python.org/pypi/ntDocutils)
 
 **ntDocutils** is a theme manager for [Docutils](http://docutils.sourceforge.net/).
 It acts as a wrapper for the `rst2html5.py` frontend, and that enables the
@@ -22,30 +22,30 @@ customization possibility of the resulting file.
 
 **Requirements:**
 
-* Python >= 3.4 
+* Python >= 3.9
 
 ## From PyPI
 
 ```shell-session
-$ pip install NtDocutils
+$ pip install ntDocutils
 ```
 
 ## From source
 
 ```shell-session
-$ wget https://github.com/ntrrg/ntdocutils/archive/v1.0.0.tar.gz
+$ wget https://github.com/ntrrg/ntdocutils/archive/v1.0.1.tar.gz
 ```
 
 ```shell-session
-$ tar -xvf v1.0.0.tar.gz
+$ tar -xvf v1.0.1.tar.gz
 ```
 
 ```shell-session
-$ cd ntdocutils-1.0.0
+$ cd ntdocutils-1.0.1
 ```
 
 ```shell-session
-$ python3 setup.py
+$ pip install .
 ```
 
 # Usage
@@ -104,7 +104,7 @@ And this is the result:
 $ ntdocutils -h
 usage: ntdocutils [-h] [-V] [-T THEME] [-S SERVER] SOURCE DESTINATION
 
-NtDocutils is a theme manager for Docutils.
+ntDocutils is a theme manager for Docutils.
 
 positional arguments:
   SOURCE                file to process.
@@ -122,7 +122,7 @@ optional arguments:
                         theme name in the 'DESTINATION' parent folder and
                         stores the necessary assets in there.
 
-NtDocutils v1.0.0 https://nt.web.ve/en/projects/ntdocutils
+ntDocutils v1.0.1 https://nt.web.ve/en/projects/ntdocutils
 Copyright (c) 2017 Miguel Angel Rivera Notararigo
 Licensed under The MIT License
 ```
@@ -196,7 +196,7 @@ $ cd ..
 ```
 
 ```shell-session
-$ pip install setuptools twine
+$ pip install build twine
 ```
 
 ```shell-session
@@ -204,7 +204,7 @@ $ rm -rf dist
 ```
 
 ```shell-session
-$ python setup.py sdist bdist_well
+$ python3 -m "build"
 ```
 
 ```shell-session
@@ -214,7 +214,7 @@ $ twine upload dist/*
 # Uninstall
 
 ```shell-session
-$ pip uninstall -y NtDocutils docutils Pygments
+$ pip uninstall -y ntDocutils docutils Pygments
 ```
 
 # Contributing

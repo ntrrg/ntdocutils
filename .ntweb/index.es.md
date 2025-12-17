@@ -10,7 +10,7 @@ tags:
   - mdl
 ---
 
-[![pypi](https://img.shields.io/pypi/v/NtDocutils.svg)](https://pypi.python.org/pypi/NtDocutils)
+[![pypi](https://img.shields.io/pypi/v/ntDocutils.svg)](https://pypi.python.org/pypi/ntDocutils)
 
 **ntDocutils** es un gestor de temas para [Docutils](http://docutils.sourceforge.net/).
 Su función es ser un mediador para el frontend `rst2html5.py`, y con esto
@@ -22,30 +22,30 @@ habilitar la posibilidad de personalizar el archivo obtenido.
 
 **Requisitos:**
 
-* Python >= 3.4 
+* Python >= 3.9
 
 ## Desde el PyPI
 
 ```shell-session
-$ pip install NtDocutils
+$ pip install ntDocutils
 ```
 
 ## Desde el código fuente
 
 ```shell-session
-$ wget https://github.com/ntrrg/ntdocutils/archive/v1.0.0.tar.gz
+$ wget https://github.com/ntrrg/ntdocutils/archive/v1.0.1.tar.gz
 ```
 
 ```shell-session
-$ tar -xvf v1.0.0.tar.gz
+$ tar -xvf v1.0.1.tar.gz
 ```
 
 ```shell-session
-$ cd ntdocutils-1.0.0
+$ cd ntdocutils-1.0.1
 ```
 
 ```shell-session
-$ python3 setup.py
+$ pip install .
 ```
 
 # Uso
@@ -104,7 +104,7 @@ Y el resultado es:
 $ ntdocutils -h
 usage: ntdocutils [-h] [-V] [-T THEME] [-S SERVER] SOURCE DESTINATION
 
-NtDocutils is a theme manager for Docutils.
+ntDocutils is a theme manager for Docutils.
 
 positional arguments:
   SOURCE                file to process.
@@ -122,18 +122,18 @@ optional arguments:
                         theme name in the 'DESTINATION' parent folder and
                         stores the necessary assets in there.
 
-NtDocutils v1.0.0 https://nt.web.ve/en/projects/ntdocutils
+ntDocutils v1.0.1 https://nt.web.ve/en/projects/ntdocutils
 Copyright (c) 2017 Miguel Angel Rivera Notararigo
 Licensed under The MIT License
 ```
 
-NtDocutils recibe dos argumentos, `SOURCE` y `DESTINATION`, que son el archivo
+ntDocutils recibe dos argumentos, `SOURCE` y `DESTINATION`, que son el archivo
 reStructuredText y el archivo donde se escribirá resultado (HTML)
 respectivamente; además puede recibir cuatro opciones:
 
 * `-h`, `--help`: muestra el texto de ayuda de arriba y finaliza la ejecución.
 
-* `-V`, `--version`: muestra la versión de NtDocutils y finaliza la ejecución.
+* `-V`, `--version`: muestra la versión de ntDocutils y finaliza la ejecución.
 
 * `-T TEMA`, `--theme TEMA`: determina el tema que será usado para procesar el
   archivo `SOURCE`; si no se especifica algún tema, se usará el estilo
@@ -141,7 +141,7 @@ respectivamente; además puede recibir cuatro opciones:
 
 * `-S SERVIDOR`, `--server SERVIDOR`: servidor de donde se descargarán los
   archivos estáticos del tema (CSS, JavaScript, etc...); en caso de que se use
-  el valor `local`, NtDocutils creará una carpeta justo al lado del archivo
+  el valor `local`, ntDocutils creará una carpeta justo al lado del archivo
   `DESTINATION` que contendrá todos archivos necesitados por el tema.
 
 # Temas
@@ -213,7 +213,7 @@ $ cd ..
 ```
 
 ```shell-session
-$ pip install setuptools twine
+$ pip install build twine
 ```
 
 ```shell-session
@@ -221,7 +221,7 @@ $ rm -rf dist
 ```
 
 ```shell-session
-$ python setup.py sdist bdist_well
+$ python3 -m "build"
 ```
 
 ```shell-session
@@ -231,7 +231,7 @@ $ twine upload dist/*
 # Desinstalar
 
 ```shell-session
-$ pip uninstall -y NtDocutils docutils Pygments
+$ pip uninstall -y ntDocutils docutils Pygments
 ```
 
 # Contribuir

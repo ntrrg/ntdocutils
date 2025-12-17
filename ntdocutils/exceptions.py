@@ -1,12 +1,11 @@
-# NtDocutils https://nt.web.ve/en/projects/ntdocutils
-# Copyright (c) 2017 Miguel Angel Rivera Notararigo
-
+# Copyright 2017 Miguel Angel Rivera Notararigo. All rights reserved.
+# This source code was released under the MIT license.
 """
-NtDocutils exceptions.
+ntDocutils exceptions.
 
 Provides:
 
-* ``OfflineUnsupported``: theme doesn't support offline mode.
+- ``OfflineUnsupported``: theme doesn't support offline mode.
 """
 
 
@@ -15,19 +14,17 @@ class OfflineUnsupported(Exception):
     Creates an exception to raise when theme doesn't support offline mode.
     """
 
-    def __init__(self, theme):
+    def __init__(self, theme: str):
         """
-        ``OfflineUnsupported("<theme>")``
-
         ``theme`` (string)
           Theme name.
 
-        Example
-        =======
+        Examples
+        ========
 
         .. code:: python
 
-            raise OfflineUnsupported("mdl")
+            raise OfflineUnsupported('mdl')
         """
         message = "{theme} theme doesn't support offline mode"
         Exception.__init__(self, message.format(theme=theme))
