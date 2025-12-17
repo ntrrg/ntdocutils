@@ -42,7 +42,7 @@ setup(
 
     keywords="docutils restructuredtext docutils-theme-manager docutils-themes documentation",
     packages=find_packages(),
-    install_requires=["docutils==0.14", "Pygments==2.2.0"],
+    install_requires=["docutils==0.14", "Pygments==2.15.0"],
     include_package_data=True,
 
     entry_points={
